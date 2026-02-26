@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <!--
+      ============================================================
+      JPetStore 6 - Performance Test Plan
+      ============================================================
+      Simulates a realistic end-to-end user journey:
+        1. Launch Home Page
+        2. Navigate to Sign In page
+        3. Login with CSV credentials
+        4. Extract categories from landing page
+        5. For each category: browse category, click first product, add first item to cart
+        6. View Cart and assert items are present
+        7. Logout
+      ============================================================
+    -->
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="JPetStore Performance Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments">End-to-end performance test for JPetStore 6 application. Simulates browsing, login, category iteration, add-to-cart, and logout.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+
+      <!-- ============================================================
+           User Defined Variables
+           ============================================================
+           Centralizes all configurable parameters so the test plan can
+           be adjusted without editing individual samplers.
+           - SERVER: Target server hostname/IP
+           - PORT: Target server port
+           - PROTOCOL: http or https
+           - BASE_PATH: Application context path
+           - THREAD_COUNT: Number of virtual users (VUs)
+           - RAMP_UP: Ramp-up period in seconds
+           - LOOP_COUNT: Number of iterations per thread
+           - THINK_TIME_MS: Base think time in milliseconds
+           - THINK_TIME_DEVIATION_MS: Random deviation for think time
+           - RESPONSE_TIMEOUT_MS: Max acceptable response time (duration assertion)
+      -->
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="SERVER" elementType="Argument">
+            <stringProp name="Argument.name">SERVER</stringProp>
+            <stringProp name="Argument.value">52.146.7.63</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PORT" elementType="Argument">
+            <stringProp name="Argument.name">PORT</stringProp>
+            <stringProp name="Argument.value">8080</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PROTOCOL" elementType="Argument">
+            <stringProp name="Argument.name">PROTOCOL</stringProp>
+            <stringProp name="Argument.value">http</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_PATH" elementType="Argument">
+            <stringProp name="Argument.name">BASE_PATH</stringProp>
+            <stringProp name="Argument.value">/actions</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="THREAD_COUNT" elementType="Argument">
+            <stringProp name="Argument.name">THREAD_COUNT</stringProp>
+            <stringProp name="Argument.value">5</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="RAMP_UP" elementType="Argument">
+            <stringProp name="Argument.name">RAMP_UP</stringProp>
+            <stringProp name="Argument.value">10</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="LOOP_COUNT" elementType="Argument">
+            <stringProp name="Argument.name">LOOP_COUNT</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="THINK_TIME_MS" elementType="Argument">
+            <stringProp name="Argument.name">THINK_TIME_MS</stringProp>
+            <stringProp name="Argument.value">2000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="THINK_TIME_DEVIATION_MS" elementType="Argument">
+            <stringProp name="Argument.name">THINK_TIME_DEVIATION_MS</stringProp>
+            <stringProp name="Argument.value">1000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="RESPONSE_TIMEOUT_MS" elementType="Argument">
+            <stringProp name="Argument.name">RESPONSE_TIMEOUT_MS</stringProp>
+            <stringProp name="Argument.value">5000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+
+      <!-- ============================================================
+           CSV Data Set Config
+           ============================================================
+           Reads username and password from users.csv file.
+           - Filename: users.csv (must be in same directory as .jmx or provide full path)
+           - Variable Names: username, password
+           - Delimiter: comma
+           - Recycle on EOF: True (re-read from start when file ends)
+           - Stop thread on EOF: False
+           - Sharing mode: All threads (thread-safe sharing across VUs)
+      -->
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - User Credentials" enabled="true">
+        <stringProp name="TestPlan.comments">Reads login credentials from users.csv. Each thread gets the next row. Columns: username, password</stringProp>
+        <stringProp name="delimiter">,</stringProp>
+        <stringProp name="fileEncoding">UTF-8</stringProp>
+        <stringProp name="filename">users.csv</stringProp>
+        <boolProp name="ignoreFirstLine">false</boolProp>
+        <boolProp name="quotedData">false</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+        <boolProp name="stopThread">false</boolProp>
+        <stringProp name="variableNames">username,password</stringProp>
+      </CSVDataSet>
+      <hashTree/>
+
+      <!-- ============================================================
+           HTTP Request Defaults
+           ============================================================
+           Sets default server, port, and protocol for all HTTP requests
+           so they don't need to be repeated in every sampler.
+      -->
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <stringProp name="TestPlan.comments">Default server settings applied to all HTTP Samplers. Change SERVER, PORT, PROTOCOL via User Defined Variables.</stringProp>
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">${SERVER}</stringProp>
+        <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+        <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+        <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout">10000</stringProp>
+        <stringProp name="HTTPSampler.response_timeout">30000</stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+
+      <!-- ============================================================
+           HTTP Cookie Manager
+           ============================================================
+           Maintains session cookies (JSESSIONID) across requests.
+           Essential for Stripes-based session management in JPetStore.
+           - Policy: standard (RFC 2109)
+           - Clear cookies each iteration: true (fresh session per loop)
+      -->
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+        <stringProp name="CookieManager.policy">standard</stringProp>
+        <stringProp name="CookieManager.implementation">org.apache.jmeter.protocol.http.control.HC4CookieHandler</stringProp>
+      </CookieManager>
+      <hashTree/>
+
+      <!-- ============================================================
+           HTTP Header Manager
+           ============================================================
+           Sets common HTTP headers for all requests:
+           - Accept: text/html for standard page requests
+           - Accept-Language: en-US
+           - Content-Type: application/x-www-form-urlencoded for POST forms
+      -->
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Accept-Language</stringProp>
+            <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Accept-Encoding</stringProp>
+            <stringProp name="Header.value">gzip, deflate</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Connection</stringProp>
+            <stringProp name="Header.value">keep-alive</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+
+      <!-- ============================================================
+           Thread Group - JPetStore User Journey
+           ============================================================
+           Configurable thread group that drives the entire user journey.
+           - Number of Threads: ${THREAD_COUNT} (default 5 VUs)
+           - Ramp-Up Period: ${RAMP_UP} (default 10 seconds)
+           - Loop Count: ${LOOP_COUNT} (default 1 iteration)
+           - On Sampler Error: Start Next Thread Loop (non-critical errors continue)
+      -->
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="JPetStore User Journey" enabled="true">
+        <stringProp name="TestPlan.comments">Main thread group simulating end-to-end user journey. Configure threads, ramp-up, and loop count via User Defined Variables.</stringProp>
+        <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${LOOP_COUNT}</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${THREAD_COUNT}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${RAMP_UP}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+
+        <!-- ============================================================
+             STEP 1: Launch Home Page
+             ============================================================
+             HTTP GET to the main catalog page. This is the application entry point.
+             Also extracts the Stripes _sourcePage and __fp tokens from the search form
+             for potential use in subsequent POST requests.
+        -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Step 1 - Launch Home Page" enabled="true">
+          <stringProp name="TestPlan.comments">GET the JPetStore home/catalog page. Entry point for the user journey.</stringProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.path">${BASE_PATH}/Catalog.action</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <!-- Duration Assertion: Flag if home page takes longer than threshold -->
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Duration Assertion - Home Page" enabled="true">
+            <stringProp name="DurationAssertion.duration">${RESPONSE_TIMEOUT_MS}</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+          <!-- Response Assertion: Verify home page loaded (contains JPetStore content) -->
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert Home Page Loaded" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">Sign In</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Home page did not load correctly - missing Sign In link</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <!-- Gaussian Random Timer: Think time after viewing home page -->
+          <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Think Time - Home Page" enabled="true">
+            <stringProp name="ConstantTimer.delay">${THINK_TIME_MS}</stringProp>
+            <stringProp name="RandomTimer.range">${THINK_TIME_DEVIATION_MS}</stringProp>
+          </GaussianRandomTimer>
+          <hashTree/>
+        </hashTree>
+
+        <!-- ============================================================
+             STEP 2: Navigate to Sign In Page
+             ============================================================
+             HTTP GET to the login/signon form page.
+             Extracts the Stripes framework hidden tokens (_sourcePage, __fp)
+             needed for the login POST request.
+        -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Step 2 - Navigate to Sign In Page" enabled="true">
+          <stringProp name="TestPlan.comments">GET the Sign In form page. Extracts Stripes _sourcePage and __fp tokens for the login POST.</stringProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="signonForm" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">signonForm</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.path">${BASE_PATH}/Account.action</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <!-- Duration Assertion -->
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Duration Assertion - Sign In Page" enabled="true">
+            <stringProp name="DurationAssertion.duration">${RESPONSE_TIMEOUT_MS}</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+          <!--
+            RegEx Extractor: Extract Stripes _sourcePage token
+            The Stripes framework injects hidden fields _sourcePage and __fp
+            into every form. These must be sent with POST requests.
+            - Reference Name: sourcePage (stored as JMeter variable ${sourcePage})
+            - Regular Expression: matches the hidden input value
+            - Template: $1$ (first capture group)
+            - Match No.: 2 (second form on page is the login form; first is search)
+            - Default: NOT_FOUND
+          -->
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extract _sourcePage Token" enabled="true">
+            <stringProp name="TestPlan.comments">Extracts _sourcePage hidden field from the login form (Stripes CSRF-like token)</stringProp>
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">sourcePage</stringProp>
+            <stringProp name="RegexExtractor.regex">name="_sourcePage"\s+value="([^"]+)"</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
+            <stringProp name="RegexExtractor.match_number">2</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+          <!--
+            RegEx Extractor: Extract Stripes __fp token
+            - Reference Name: fp (stored as JMeter variable ${fp})
+            - Match No.: 2 (login form is the second form on the page)
+          -->
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extract __fp Token" enabled="true">
+            <stringProp name="TestPlan.comments">Extracts __fp hidden field from the login form (Stripes fingerprint token)</stringProp>
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">fp</stringProp>
+            <stringProp name="RegexExtractor.regex">name="__fp"\s+value="([^"]+)"</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
+            <stringProp name="RegexExtractor.match_number">2</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+          <!-- Gaussian Random Timer: Think time simulating user reading the login form -->
+          <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Think Time - Sign In Page" enabled="true">
+            <stringProp name="ConstantTimer.delay">${THINK_TIME_MS}</stringProp>
+            <stringProp name="RandomTimer.range">${THINK_TIME_DEVIATION_MS}</stringProp>
+          </GaussianRandomTimer>
+          <hashTree/>
+        </hashTree>
+
+        <!-- ============================================================
+             STEP 3: Login (POST)
+             ============================================================
+             POST credentials to Account.action with the Stripes tokens.
+             - username and password come from CSV Data Set Config
+             - _sourcePage and __fp come from the previous page extraction
+             After login, the response redirects to the main catalog page
+             which shows "Welcome" and "Sign Out" links.
+        -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Step 3 - Login" enabled="true">
+          <stringProp name="TestPlan.comments">POST login credentials. Uses CSV-parameterized username/password and extracted Stripes tokens.</stringProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="username" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">${username}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">username</stringProp>
+              </elementProp>
+              <elementProp name="password" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">${password}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">password</stringProp>
+              </elementProp>
+              <elementProp name="signon" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">Login</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">signon</stringProp>
+              </elementProp>
+              <elementProp name="_sourcePage" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">${sourcePage}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">_sourcePage</stringProp>
+              </elementProp>
+              <elementProp name="__fp" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">${fp}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">__fp</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.path">${BASE_PATH}/Account.action</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <!-- Duration Assertion -->
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Duration Assertion - Login" enabled="true">
+            <stringProp name="DurationAssertion.duration">${RESPONSE_TIMEOUT_MS}</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+          <!--
+            Response Assertion: Login Success
+            Verifies that the response DOES contain "Sign Out" (present after successful login)
+            and does NOT contain "Invalid username or password".
+          -->
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert Login Success - Sign Out Present" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="1973535592">Sign Out</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Login failed: Sign Out link not found in response. User: ${username}</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert Login Success - No Error Message" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="1938681894">Invalid username or password</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Login failed with invalid credentials error. User: ${username}</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">6</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <!--
+            JSR223 PostProcessor: Set loginSuccess flag
+            Checks the login response to determine if login was successful.
+            Sets a variable 'loginSuccess' that the If Controller uses
+            to decide whether to continue the user journey.
+            Also logs failure context for debugging.
+          -->
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor - Set Login Flag" enabled="true">
+            <stringProp name="TestPlan.comments">Sets loginSuccess flag based on login response. Used by If Controller to skip steps on login failure.</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">
+// JSR223 PostProcessor - Login Success Flag
+// Checks if the login response contains "Sign Out" (indicating success)
+// and sets the loginSuccess variable accordingly.
+def responseBody = prev.getResponseDataAsString()
+def currentUser = vars.get("username")
+
+if (responseBody.contains("Sign Out")) {
+    vars.put("loginSuccess", "true")
+    log.info("Login successful for user: " + currentUser)
+} else {
+    vars.put("loginSuccess", "false")
+    log.error("Login FAILED for user: " + currentUser + " | Response code: " + prev.getResponseCode() + " | Thread: " + ctx.getThread().getThreadName())
+    
+    // Write failure details to JMeter log for post-analysis
+    log.error("Login failure response snippet: " + responseBody.take(500))
+}
+            </stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+          <!--
+            RegEx Extractor: Extract all category IDs from the home page after login.
+            Categories appear as links in the QuickLinks div:
+              href="/actions/Catalog.action?viewCategory=&amp;categoryId=FISH"
+            This extracts all categoryId values into variables:
+              category_1, category_2, ... category_matchNr
+            - Reference Name: category
+            - Match No.: -1 (extract ALL matches)
+          -->
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extract All Category IDs" enabled="true">
+            <stringProp name="TestPlan.comments">Extracts all category IDs (FISH, DOGS, REPTILES, CATS, BIRDS) from the home page response after login. Stored as category_1 through category_N, with category_matchNr containing the count.</stringProp>
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">category</stringProp>
+            <stringProp name="RegexExtractor.regex">viewCategory=&amp;categoryId=([A-Z]+)"&gt;&lt;img src="\.\./images/sm_</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
+            <stringProp name="RegexExtractor.match_number">-1</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+          <!--
+            JSR223 PostProcessor: Log extracted categories for debugging
+          -->
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor - Log Categories" enabled="true">
+            <stringProp name="TestPlan.comments">Logs the extracted categories for debugging and verification.</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">
+// Log extracted categories for debugging
+def matchCount = vars.get("category_matchNr")
+if (matchCount != null &amp;&amp; matchCount.toInteger() &gt; 0) {
+    def categories = []
+    for (int i = 1; i &lt;= matchCount.toInteger(); i++) {
+        categories.add(vars.get("category_" + i))
+    }
+    log.info("Extracted " + matchCount + " categories: " + categories.join(", ") + " | User: " + vars.get("username"))
+    
+    // Initialize a list to track added item IDs for cart assertion later
+    vars.put("addedItemsList", "")
+} else {
+    log.warn("No categories extracted for user: " + vars.get("username") + " | Check regex or response content")
+}
+            </stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+          <!-- Gaussian Random Timer: Think time after login -->
+          <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Think Time - After Login" enabled="true">
+            <stringProp name="ConstantTimer.delay">${THINK_TIME_MS}</stringProp>
+            <stringProp name="RandomTimer.range">${THINK_TIME_DEVIATION_MS}</stringProp>
+          </GaussianRandomTimer>
+          <hashTree/>
+        </hashTree>
+
+        <!-- ============================================================
+             If Controller: Proceed only if login was successful
+             ============================================================
+             Checks the loginSuccess flag. If login failed, all subsequent
+             steps (category browsing, cart, logout) are skipped.
+             The thread will start the next loop iteration.
+        -->
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Login Successful" enabled="true">
+          <stringProp name="TestPlan.comments">Only proceed with category browsing, cart, and logout if login was successful. Skips remaining steps on login failure.</stringProp>
+          <stringProp name="IfController.condition">${__groovy(vars.get("loginSuccess") == "true")}</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+          <boolProp name="IfController.useExpression">true</boolProp>
+        </IfController>
+        <hashTree>
+
+          <!-- ============================================================
+               STEP 4 & 5: Category Iteration Loop
+               ============================================================
+               ForEach Controller iterates over all extracted category IDs.
+               For each category:
+                 a) Navigate to the category page
+                 b) Extract the first product ID
+                 c) Navigate to the product page
+                 d) Extract the first item ID
+                 e) Add the first item to cart
+          -->
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller - Iterate Categories" enabled="true">
+            <stringProp name="TestPlan.comments">Iterates over all extracted categories (category_1 through category_N). For each category, browses products and adds the first item to cart.</stringProp>
+            <stringProp name="ForeachController.inputVal">category</stringProp>
+            <stringProp name="ForeachController.returnVal">currentCategory</stringProp>
+            <boolProp name="ForeachController.useSeparator">true</boolProp>
+            <stringProp name="ForeachController.startIndex">0</stringProp>
+            <stringProp name="ForeachController.endIndex"></stringProp>
+          </ForeachController>
+          <hashTree>
+
+            <!-- ============================================================
+                 STEP 5a: Navigate to Category Page
+                 ============================================================
+                 HTTP GET to the category page for the current category.
+                 Extracts the first product ID from the results table.
+            -->
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Step 5a - View Category: ${currentCategory}" enabled="true">
+              <stringProp name="TestPlan.comments">GET the category page. Extracts the first product ID from the product listing table.</stringProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="viewCategory" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value"></stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">viewCategory</stringProp>
+                  </elementProp>
+                  <elementProp name="categoryId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.value">${currentCategory}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">categoryId</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.path">${BASE_PATH}/Catalog.action</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <!-- Duration Assertion -->
+              <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Duration Assertion - Category Page" enabled="true">
+                <stringProp name="DurationAssertion.duration">${RESPONSE_TIMEOUT_MS}</stringProp>
+              </DurationAssertion>
+              <hashTree/>
+              <!--
+                RegEx Extractor: Extract the first product ID from the category page.
+                Product links appear as:
+                  href="/actions/Catalog.action?viewProduct=&amp;productId=FI-SW-01"
+                - Reference Name: firstProductId
+                - Match No.: 1 (first match = first product in the table)
+              -->
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extract First Product ID" enabled="true">
+                <stringProp name="TestPlan.comments">Extracts the first product ID from the category page product listing.</stringProp>
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">firstProductId</stringProp>
+                <stringProp name="RegexExtractor.regex">viewProduct=&amp;productId=([^"]+)"</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <!--
+                JSR223 PostProcessor: Check if category has products
+                Sets hasProducts flag for the If Controller below.
+              -->
+              <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor - Check Products" enabled="true">
+                <stringProp name="TestPlan.comments">Sets hasProducts flag. If no products found, subsequent steps for this category are skipped gracefully.</stringProp>
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">
+// Check if a product was found in this category
+def productId = vars.get("firstProductId")
+if (productId != null &amp;&amp; productId != "NOT_FOUND") {
+    vars.put("hasProducts", "true")
+    log.info("Category " + vars.get("currentCategory") + " has product: " + productId)
+} else {
+    vars.put("hasProducts", "false")
+    log.warn("No products found in category: " + vars.get("currentCategory") + " | User: " + vars.get("username"))
+}
+                </stringProp>
+              </JSR223PostProcessor>
+              <hashTree/>
+              <!-- Gaussian Random Timer -->
+              <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Think Time - Category Page" enabled="true">
+                <stringProp name="ConstantTimer.delay">${THINK_TIME_MS}</stringProp>
+                <stringProp name="RandomTimer.range">${THINK_TIME_DEVIATION_MS}</stringProp>
+              </GaussianRandomTimer>
+              <hashTree/>
+            </hashTree>
+
+            <!-- ============================================================
+                 If Controller: Only proceed if category has products
+                 ============================================================
+                 Handles the case where a category has no products gracefully.
+            -->
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Category Has Products" enabled="true">
+              <stringProp name="TestPlan.comments">Skip product/item steps if no products were found in this category.</stringProp>
+              <stringProp name="IfController.condition">${__groovy(vars.get("hasProducts") == "true")}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+              <boolProp name="IfController.useExpression">true</boolProp>
+            </IfController>
+            <hashTree>
+
+              <!-- ============================================================
+                   STEP 5b: View First Product in Category
+                   ============================================================
+                   Navigates to the product page for the first product.
+                   Extracts the first item ID and its "Add to Cart" link.
+              -->
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Step 5b - View Product: ${firstProductId}" enabled="true">
+                <stringProp name="TestPlan.comments">GET the product page for the first product in the category. Extracts the first item ID for adding to cart.</stringProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="viewProduct" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value"></stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                      <stringProp name="Argument.name">viewProduct</stringProp>
+                    </elementProp>
+                    <elementProp name="productId" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.value">${firstProductId}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                      <stringProp name="Argument.name">productId</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.path">${BASE_PATH}/Catalog.action</stringProp>
+                <stringProp name="HTTPSampler.method">GET</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <!-- Duration Assertion -->
+                <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Duration Assertion - Product Page" enabled="true">
+                  <stringProp name="DurationAssertion.duration">${RESPONSE_TIMEOUT_MS}</stringProp>
+                </DurationAssertion>
+                <hashTree/>
+                <!--
+                  RegEx Extractor: Extract the first item ID from the product page.
+                  Item "Add to Cart" links appear as:
+                    href="/actions/Cart.action?addItemToCart=&amp;workingItemId=EST-1"
+                  - Reference Name: firstItemId
+                  - Match No.: 1 (first item in the table)
+                -->
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extract First Item ID" enabled="true">
+                  <stringProp name="TestPlan.comments">Extracts the first item ID (e.g., EST-1) from the product page for adding to cart.</stringProp>
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">firstItemId</stringProp>
+                  <stringProp name="RegexExtractor.regex">addItemToCart=&amp;workingItemId=([^"]+)"</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <!--
+                  JSR223 PostProcessor: Check if product has items and track added items
+                -->
+                <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor - Check Items" enabled="true">
+                  <stringProp name="TestPlan.comments">Sets hasItems flag and tracks added item IDs for cart verification.</stringProp>
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="script">
+// Check if an item was found for this product
+def itemId = vars.get("firstItemId")
+if (itemId != null &amp;&amp; itemId != "NOT_FOUND") {
+    vars.put("hasItems", "true")
+    log.info("Product " + vars.get("firstProductId") + " has item: " + itemId)
+} else {
+    vars.put("hasItems", "false")
+    log.warn("No items found for product: " + vars.get("firstProductId") + " in category: " + vars.get("currentCategory"))
+}
+                  </stringProp>
+                </JSR223PostProcessor>
+                <hashTree/>
+                <!-- Gaussian Random Timer -->
+                <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Think Time - Product Page" enabled="true">
+                  <stringProp name="ConstantTimer.delay">${THINK_TIME_MS}</stringProp>
+                  <stringProp name="RandomTimer.range">${THINK_TIME_DEVIATION_MS}</stringProp>
+                </GaussianRandomTimer>
+                <hashTree/>
+              </hashTree>
+
+              <!-- ============================================================
+                   If Controller: Only add to cart if item exists
+                   ============================================================
+              -->
+              <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Has Items to Add" enabled="true">
+                <stringProp name="TestPlan.comments">Skip add-to-cart if no items were found for this product.</stringProp>
+                <stringProp name="IfController.condition">${__groovy(vars.get("hasItems") == "true")}</stringProp>
+                <boolProp name="IfController.evaluateAll">false</boolProp>
+                <boolProp name="IfController.useExpression">true</boolProp>
+              </IfController>
+              <hashTree>
+
+                <!-- ============================================================
+                     STEP 5c: Add First Item to Cart
+                     ============================================================
+                     HTTP GET to Cart.action?addItemToCart=&workingItemId={ITEM_ID}
+                     This adds the item to the shopping cart and displays the cart.
+                -->
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Step 5c - Add to Cart: ${firstItemId}" enabled="true">
+                  <stringProp name="TestPlan.comments">Add the first item from the current category's first product to the shopping cart.</stringProp>
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                    <collectionProp name="Arguments.arguments">
+                      <elementProp name="addItemToCart" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                        <stringProp name="Argument.value"></stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                        <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                        <stringProp name="Argument.name">addItemToCart</stringProp>
+                      </elementProp>
+                      <elementProp name="workingItemId" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                        <stringProp name="Argument.value">${firstItemId}</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                        <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                        <stringProp name="Argument.name">workingItemId</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.path">${BASE_PATH}/Cart.action</stringProp>
+                  <stringProp name="HTTPSampler.method">GET</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <!-- Duration Assertion -->
+                  <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Duration Assertion - Add to Cart" enabled="true">
+                    <stringProp name="DurationAssertion.duration">${RESPONSE_TIMEOUT_MS}</stringProp>
+                  </DurationAssertion>
+                  <hashTree/>
+                  <!--
+                    Response Assertion: Add to Cart confirmation
+                    After adding an item, the cart page is shown.
+                    Assert it contains "Shopping Cart" heading and the item ID.
+                  -->
+                  <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert Add to Cart - Shopping Cart Displayed" enabled="true">
+                    <collectionProp name="Asserion.test_strings">
+                      <stringProp name="1196003757">Shopping Cart</stringProp>
+                    </collectionProp>
+                    <stringProp name="Assertion.custom_message">Add to Cart failed: Shopping Cart page not displayed after adding item ${firstItemId}</stringProp>
+                    <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                    <boolProp name="Assertion.assume_success">false</boolProp>
+                    <intProp name="Assertion.test_type">2</intProp>
+                  </ResponseAssertion>
+                  <hashTree/>
+                  <!--
+                    JSR223 PostProcessor: Track added item IDs
+                    Appends the item ID to a comma-separated list for later cart assertion.
+                  -->
+                  <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor - Track Added Items" enabled="true">
+                    <stringProp name="TestPlan.comments">Tracks all item IDs added to cart for verification in the View Cart step.</stringProp>
+                    <stringProp name="scriptLanguage">groovy</stringProp>
+                    <stringProp name="parameters"></stringProp>
+                    <stringProp name="filename"></stringProp>
+                    <stringProp name="cacheKey">true</stringProp>
+                    <stringProp name="script">
+// Track added items for cart verification
+def itemId = vars.get("firstItemId")
+def addedItems = vars.get("addedItemsList") ?: ""
+
+if (itemId != null &amp;&amp; itemId != "NOT_FOUND") {
+    if (addedItems.length() &gt; 0) {
+        addedItems = addedItems + "," + itemId
+    } else {
+        addedItems = itemId
+    }
+    vars.put("addedItemsList", addedItems)
+    log.info("Added item " + itemId + " to cart. All added items so far: " + addedItems + " | User: " + vars.get("username"))
+}
+                    </stringProp>
+                  </JSR223PostProcessor>
+                  <hashTree/>
+                  <!-- Gaussian Random Timer -->
+                  <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Think Time - After Add to Cart" enabled="true">
+                    <stringProp name="ConstantTimer.delay">${THINK_TIME_MS}</stringProp>
+                    <stringProp name="RandomTimer.range">${THINK_TIME_DEVIATION_MS}</stringProp>
+                  </GaussianRandomTimer>
+                  <hashTree/>
+                </hashTree>
+
+              <!-- End of If Controller - Has Items -->
+              </hashTree>
+
+            <!-- End of If Controller - Category Has Products -->
+            </hashTree>
+
+          <!-- End of ForEach Controller -->
+          </hashTree>
+
+          <!-- ============================================================
+               STEP 6: View Cart
+               ============================================================
+               Navigate to the cart page and assert that the items
+               added during category iteration are present.
+          -->
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Step 6 - View Cart" enabled="true">
+            <stringProp name="TestPlan.comments">GET the cart page to verify all items added during category iteration are present.</stringProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="viewCart" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">viewCart</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.path">${BASE_PATH}/Cart.action</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <!-- Duration Assertion -->
+            <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Duration Assertion - View Cart" enabled="true">
+              <stringProp name="DurationAssertion.duration">${RESPONSE_TIMEOUT_MS}</stringProp>
+            </DurationAssertion>
+            <hashTree/>
+            <!--
+              Response Assertion: Cart contains items
+              Asserts the cart page shows "Shopping Cart" and "Sub Total"
+              (Sub Total presence means there is at least one item).
+            -->
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert Cart - Shopping Cart Page Loaded" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="1196003757">Shopping Cart</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message">View Cart failed: Shopping Cart page not loaded</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <!--
+              JSR223 Assertion: Dynamic Cart Verification
+              Checks that each item ID tracked in addedItemsList is present
+              in the cart page response. This provides a dynamic, per-iteration
+              assertion rather than a static string check.
+            -->
+            <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion - Verify Cart Contents" enabled="true">
+              <stringProp name="TestPlan.comments">Dynamically verifies that all items added during category iteration are present in the cart page response.</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">
+// JSR223 Assertion - Dynamic Cart Contents Verification
+// Verifies that each item added during the category iteration loop
+// is present in the cart page response.
+def responseBody = prev.getResponseDataAsString()
+def addedItems = vars.get("addedItemsList")
+def currentUser = vars.get("username")
+
+if (addedItems == null || addedItems.trim().isEmpty()) {
+    log.warn("No items were added to cart for user: " + currentUser + " - nothing to verify")
+    // Not failing the assertion if no items were added (categories may have been empty)
+    return
+}
+
+def itemList = addedItems.split(",")
+def missingItems = []
+
+for (item in itemList) {
+    item = item.trim()
+    if (!responseBody.contains(item)) {
+        missingItems.add(item)
+    }
+}
+
+if (missingItems.size() &gt; 0) {
+    def failMsg = "Cart verification FAILED for user: " + currentUser + " | Missing items: " + missingItems.join(", ") + " | Expected items: " + addedItems
+    log.error(failMsg)
+    AssertionResult.setFailure(true)
+    AssertionResult.setFailureMessage(failMsg)
+} else {
+    log.info("Cart verification PASSED for user: " + currentUser + " | All " + itemList.length + " items found: " + addedItems)
+}
+              </stringProp>
+            </JSR223Assertion>
+            <hashTree/>
+            <!-- Gaussian Random Timer -->
+            <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Think Time - After Cart View" enabled="true">
+              <stringProp name="ConstantTimer.delay">${THINK_TIME_MS}</stringProp>
+              <stringProp name="RandomTimer.range">${THINK_TIME_DEVIATION_MS}</stringProp>
+            </GaussianRandomTimer>
+            <hashTree/>
+          </hashTree>
+
+          <!-- ============================================================
+               STEP 7: Logout
+               ============================================================
+               HTTP GET to Account.action?signoff= to end the session.
+               Asserts that the response shows "Sign In" (indicating logged out).
+          -->
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Step 7 - Logout" enabled="true">
+            <stringProp name="TestPlan.comments">Sign out and end the session. Asserts successful logout by checking for Sign In link.</stringProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="signoff" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">signoff</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.path">${BASE_PATH}/Account.action</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <!-- Duration Assertion -->
+            <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Duration Assertion - Logout" enabled="true">
+              <stringProp name="DurationAssertion.duration">${RESPONSE_TIMEOUT_MS}</stringProp>
+            </DurationAssertion>
+            <hashTree/>
+            <!--
+              Response Assertion: Logout Success
+              After logout, the page should show "Sign In" (not "Sign Out").
+              This confirms the session was ended successfully.
+            -->
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert Logout Success - Sign In Visible" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">Sign In</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message">Logout failed: Sign In link not found after logout. User: ${username}</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert Logout Success - Sign Out Not Visible" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="1973535592">Sign Out</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message">Logout failed: Sign Out link still visible after logout attempt. User: ${username}</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">6</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <!--
+              JSR223 PostProcessor: Error Logging on Logout
+              Logs the final status of the user journey.
+            -->
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor - Journey Complete Log" enabled="true">
+              <stringProp name="TestPlan.comments">Logs completion of the user journey with summary info.</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">
+// Log journey completion
+def user = vars.get("username")
+def addedItems = vars.get("addedItemsList") ?: "none"
+def threadName = ctx.getThread().getThreadName()
+def iterationNum = vars.getIteration()
+
+log.info("=== Journey Complete === | User: " + user + " | Thread: " + threadName + " | Iteration: " + iterationNum + " | Items added: " + addedItems)
+
+if (prev.isSuccessful()) {
+    log.info("Logout successful for user: " + user)
+} else {
+    log.error("Logout FAILED for user: " + user + " | Response code: " + prev.getResponseCode() + " | Thread: " + threadName)
+}
+              </stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+
+        <!-- End of If Controller - Login Successful -->
+        </hashTree>
+
+        <!--
+          JSR223 PostProcessor at Thread Group level: Error logging for failed login
+          This runs when login fails and the If Controller skips the rest.
+        -->
+        <JSR223Listener guiclass="TestBeanGUI" testclass="JSR223Listener" testname="JSR223 Listener - Global Error Logger" enabled="true">
+          <stringProp name="TestPlan.comments">Global error logger that captures and logs failures with relevant context for all samplers in this thread group.</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">
+// JSR223 Listener - Global Error Logger
+// Logs details for any failed sampler in the thread group.
+// Context includes: username, iteration number, sampler name, response code, and error message.
+if (!prev.isSuccessful()) {
+    def user = vars.get("username") ?: "unknown"
+    def threadName = ctx.getThread().getThreadName()
+    def iterationNum = vars.getIteration()
+    def samplerName = prev.getSampleLabel()
+    def responseCode = prev.getResponseCode()
+    def responseMsg = prev.getResponseMessage()
+    
+    def errorLog = "SAMPLER FAILED | User: " + user + " | Thread: " + threadName + " | Iteration: " + iterationNum + " | Sampler: " + samplerName + " | Response Code: " + responseCode + " | Message: " + responseMsg
+    log.error(errorLog)
+}
+          </stringProp>
+        </JSR223Listener>
+        <hashTree/>
+
+      <!-- End of Thread Group -->
+      </hashTree>
+
+      <!-- ============================================================
+           View Results Tree (disabled for load testing)
+           ============================================================
+           Useful for debugging during test development.
+           MUST be disabled during actual load tests to avoid memory issues.
+           Enable it only when running with a small number of threads.
+      -->
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>true</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+
+      <!-- ============================================================
+           Aggregate Report
+           ============================================================
+           Provides summary statistics (avg, min, max, median, 90th percentile,
+           throughput, error %) for each sampler. Essential for load test analysis.
+      -->
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>true</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+
+    <!-- End of Test Plan hashTree -->
+    </hashTree>
+  <!-- End of root hashTree -->
+  </hashTree>
+</jmeterTestPlan>
