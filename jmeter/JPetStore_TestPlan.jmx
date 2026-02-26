@@ -115,7 +115,7 @@
         <stringProp name="delimiter">,</stringProp>
         <stringProp name="fileEncoding">UTF-8</stringProp>
         <stringProp name="filename">users.csv</stringProp>
-        <boolProp name="ignoreFirstLine">false</boolProp>
+        <boolProp name="ignoreFirstLine">true</boolProp>
         <boolProp name="quotedData">false</boolProp>
         <boolProp name="recycle">true</boolProp>
         <stringProp name="shareMode">shareMode.all</stringProp>
@@ -473,7 +473,7 @@ if (responseBody.contains("Sign Out")) {
             <stringProp name="TestPlan.comments">Extracts all category IDs (FISH, DOGS, REPTILES, CATS, BIRDS) from the home page response after login. Stored as category_1 through category_N, with category_matchNr containing the count.</stringProp>
             <stringProp name="RegexExtractor.useHeaders">false</stringProp>
             <stringProp name="RegexExtractor.refname">category</stringProp>
-            <stringProp name="RegexExtractor.regex">viewCategory=&amp;categoryId=([A-Z]+)"&gt;&lt;img src="\.\./images/sm_</stringProp>
+            <stringProp name="RegexExtractor.regex">viewCategory=&amp;amp;categoryId=([A-Z]+)"&gt;&lt;img src="\.\./images/sm_</stringProp>
             <stringProp name="RegexExtractor.template">$1$</stringProp>
             <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
             <stringProp name="RegexExtractor.match_number">-1</stringProp>
@@ -600,7 +600,7 @@ if (matchCount != null &amp;&amp; matchCount.toInteger() &gt; 0) {
                 <stringProp name="TestPlan.comments">Extracts the first product ID from the category page product listing.</stringProp>
                 <stringProp name="RegexExtractor.useHeaders">false</stringProp>
                 <stringProp name="RegexExtractor.refname">firstProductId</stringProp>
-                <stringProp name="RegexExtractor.regex">viewProduct=&amp;productId=([^"]+)"</stringProp>
+                <stringProp name="RegexExtractor.regex">viewProduct=&amp;amp;productId=([^"]+)"</stringProp>
                 <stringProp name="RegexExtractor.template">$1$</stringProp>
                 <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
                 <stringProp name="RegexExtractor.match_number">1</stringProp>
@@ -700,7 +700,7 @@ if (productId != null &amp;&amp; productId != "NOT_FOUND") {
                   <stringProp name="TestPlan.comments">Extracts the first item ID (e.g., EST-1) from the product page for adding to cart.</stringProp>
                   <stringProp name="RegexExtractor.useHeaders">false</stringProp>
                   <stringProp name="RegexExtractor.refname">firstItemId</stringProp>
-                  <stringProp name="RegexExtractor.regex">addItemToCart=&amp;workingItemId=([^"]+)"</stringProp>
+                  <stringProp name="RegexExtractor.regex">addItemToCart=&amp;amp;workingItemId=([^"]+)"</stringProp>
                   <stringProp name="RegexExtractor.template">$1$</stringProp>
                   <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
                   <stringProp name="RegexExtractor.match_number">1</stringProp>
