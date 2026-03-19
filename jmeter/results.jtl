@@ -1,0 +1,903 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1773906110896,23,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5761,287,3,3,null,0,5013,15
+1773906115906,23,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5761,287,3,3,http://localhost:8080/jpetstore/actions/Catalog.action,23,0,15
+1773906112883,4,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5761,287,4,4,null,0,4238,0
+1773906117122,4,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5761,287,4,4,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906114883,4,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5761,287,5,5,null,0,4867,1
+1773906119750,4,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5761,287,5,5,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,1
+1773906115933,7,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4153,352,5,5,null,0,4388,0
+1773906120321,7,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4153,352,5,5,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,7,0,0
+1773906117127,3,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4153,352,5,5,null,0,4677,0
+1773906121802,3,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4153,352,5,5,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,3,0,0
+1773906116881,5,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5761,287,5,5,null,0,5175,1
+1773906122054,5,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5761,287,5,5,http://localhost:8080/jpetstore/actions/Catalog.action,5,0,1
+1773906118879,4,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5761,287,5,5,null,0,5400,0
+1773906124278,4,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5761,287,5,5,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906120329,9,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5486,810,5,5,null,0,4423,0
+1773906124749,9,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5486,810,5,5,http://localhost:8080/jpetstore/actions/Catalog.action,5,0,0
+1773906124749,5,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-1,,true,,188,470,5,5,http://localhost:8080/jpetstore/actions/Account.action,5,0,0
+1773906124755,3,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5298,340,5,5,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906119755,5,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4153,352,5,5,null,0,5050,0
+1773906124804,5,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4153,352,5,5,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,5,0,0
+1773906121806,6,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5486,810,5,5,null,0,3904,0
+1773906125709,6,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5486,810,5,5,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906125709,3,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-2,,true,,188,470,5,5,http://localhost:8080/jpetstore/actions/Account.action,3,0,0
+1773906125712,3,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5298,340,5,5,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906122060,5,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4153,352,5,5,null,0,4988,0
+1773906127048,5,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4153,352,5,5,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,5,0,0
+1773906124282,4,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4155,352,5,5,null,0,4406,0
+1773906128687,4,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4155,352,5,5,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,4,0,0
+1773906124810,8,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5486,810,5,5,null,0,4532,0
+1773906129341,8,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5486,810,5,5,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906129341,3,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-3,,true,,188,470,5,5,http://localhost:8080/jpetstore/actions/Account.action,3,0,0
+1773906129345,4,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5298,340,5,5,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906129007,571,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,24,0,5,5,null,0,0,0
+1773906130279,2,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,24,0,5,5,null,0,0,0
+1773906127054,7,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5486,810,5,5,null,0,3957,0
+1773906131010,7,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5486,810,5,5,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906131010,4,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-4,,true,,188,470,5,5,http://localhost:8080/jpetstore/actions/Account.action,4,0,0
+1773906131014,3,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5298,340,5,5,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906129579,6,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,3940,371,5,5,null,0,4195,0
+1773906133773,6,GET - View Category: BIRDS,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,3940,371,5,5,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=BIRDS,6,0,0
+1773906128692,7,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5486,810,5,5,null,0,5238,0
+1773906133929,7,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5486,810,5,5,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906133929,4,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-5,,true,,188,470,5,5,http://localhost:8080/jpetstore/actions/Account.action,4,0,0
+1773906133933,3,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5298,340,5,5,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906134104,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,24,0,5,5,null,0,0,0
+1773906130281,5,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,3940,371,5,5,null,0,3979,0
+1773906134259,5,GET - View Category: BIRDS,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,3940,371,5,5,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=BIRDS,5,0,0
+1773906135362,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,23,0,5,5,null,0,0,0
+1773906134265,7,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4111,372,5,5,null,0,3711,0
+1773906137976,7,GET - View Product: AV-CB-01,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4111,372,5,5,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=AV-CB-01,7,0,0
+1773906133780,5,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4111,372,5,5,null,0,4254,0
+1773906138034,5,GET - View Product: AV-CB-01,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4111,372,5,5,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=AV-CB-01,4,0,0
+1773906138689,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,27,0,5,5,null,0,0,0
+1773906134105,6,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,3940,371,5,5,null,0,5153,0
+1773906139258,6,GET - View Category: BIRDS,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,3940,371,5,5,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=BIRDS,6,0,0
+1773906135363,6,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,3936,370,5,5,null,0,4738,0
+1773906140101,6,GET - View Category: CATS,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,3936,370,5,5,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=CATS,6,0,0
+1773906138039,8,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4978,373,5,6,null,0,4159,0
+1773906142198,8,GET - Add to Cart: EST-18,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4978,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-18,8,0,0
+1773906139265,6,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4111,372,5,6,null,0,3229,0
+1773906142495,6,GET - View Product: AV-CB-01,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4111,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=AV-CB-01,6,0,0
+1773906137984,6,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4978,373,5,6,null,0,4896,0
+1773906142881,6,GET - Add to Cart: EST-18,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4978,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-18,6,0,0
+1773906138690,7,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,3942,374,5,6,null,0,5465,0
+1773906144155,7,GET - View Category: REPTILES,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,3942,374,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=REPTILES,7,0,0
+1773906140107,9,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4400,373,5,6,null,0,4994,0
+1773906145101,9,GET - View Product: FL-DSH-01,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4400,373,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=FL-DSH-01,9,0,0
+1773906142207,6,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5688,352,5,6,null,0,3999,0
+1773906146205,6,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,6,0,0
+1773906142501,7,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4978,373,5,6,null,0,4096,0
+1773906146596,7,GET - Add to Cart: EST-18,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4978,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-18,6,0,0
+1773906140881,5,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5761,287,1,6,null,0,6308,1
+1773906147188,5,GET - Home Page,200,,TG2 - Order Verification Journey 2-1,text,true,,5761,287,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,5,0,1
+1773906144163,7,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4429,372,5,6,null,0,3492,0
+1773906147654,7,GET - View Product: RP-SN-01,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4429,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=RP-SN-01,7,0,0
+1773906142888,5,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5688,352,5,6,null,0,4998,0
+1773906147884,5,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,5,0,0
+1773906145111,8,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4965,373,5,6,null,0,4640,0
+1773906149750,8,GET - Add to Cart: EST-14,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4965,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-14,8,0,0
+1773906146212,5,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4818,713,5,6,null,0,3821,0
+1773906150033,5,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,4,0,0
+1773906146603,5,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5688,352,5,6,null,0,4380,0
+1773906150983,5,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,5,0,0
+1773906147194,4,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,4155,352,1,6,null,0,3895,0
+1773906151089,4,GET - Sign In Page,200,,TG2 - Order Verification Journey 2-1,text,true,,4155,352,1,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,4,0,0
+1773906147661,8,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4972,373,5,6,null,0,4454,0
+1773906152115,8,GET - Add to Cart: EST-11,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4972,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-11,8,0,0
+1773906147890,4,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4818,713,5,6,null,0,4830,0
+1773906152720,4,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,4,0,0
+1773906150038,11,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5526,363,5,6,null,0,4552,0
+1773906154500,11,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5526,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,11,0,0
+1773906149758,5,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5688,352,5,6,null,0,5074,0
+1773906154832,5,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,5,0,0
+1773906150988,5,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4818,713,5,6,null,0,4000,0
+1773906154988,5,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,5,0,0
+1773906151093,8,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5486,810,1,6,null,0,5101,0
+1773906156194,8,POST - Login,200,,TG2 - Order Verification Journey 2-1,text,true,,5486,810,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906156194,4,POST - Login-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,470,1,6,http://localhost:8080/jpetstore/actions/Account.action,4,0,0
+1773906156199,3,POST - Login-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5298,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906152124,5,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5688,352,5,6,null,0,4665,0
+1773906156789,5,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,5,0,0
+1773906152725,9,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5526,363,5,6,null,0,4473,0
+1773906157178,9,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5526,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,9,0,0
+1773906154837,5,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4818,713,5,6,null,0,3713,0
+1773906158549,5,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,5,0,0
+1773906154993,9,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5526,363,5,6,null,0,4318,0
+1773906159293,9,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5526,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,9,0,0
+1773906154601,6,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5333,689,5,6,null,0,5150,0
+1773906159751,6,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906159751,3,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-1,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,3,0,0
+1773906159754,3,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906156795,4,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4818,713,5,6,null,0,4345,0
+1773906161139,4,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,4,0,0
+1773906157207,6,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5333,689,5,6,null,0,4383,0
+1773906161590,6,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906161590,2,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-2,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,2,0,0
+1773906161593,3,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906156202,8,TC04 - View My Orders,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,4036,350,1,6,null,0,5914,0
+1773906162066,8,GET - My Orders,200,,TG2 - Order Verification Journey 2-1,text,true,,4036,350,1,6,http://localhost:8080/jpetstore/actions/Order.action?listOrders=,8,0,0
+1773906158555,8,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5512,363,5,6,null,0,4592,0
+1773906163130,8,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5512,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,8,0,0
+1773906159320,5,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5333,689,5,6,null,0,4260,0
+1773906163579,5,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906163579,2,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-3,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,2,0,0
+1773906163582,2,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906159758,4,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5761,287,5,6,null,0,4355,0
+1773906164113,4,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906162124,6,TC05 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5333,689,1,6,null,0,3677,0
+1773906165801,6,GET - Logout,200,,TG2 - Order Verification Journey 2-1,text,true,,5333,689,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906165801,2,GET - Logout-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,349,1,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,2,0,0
+1773906165803,4,GET - Logout-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5145,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906161144,10,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5520,363,5,6,null,0,4920,0
+1773906166048,10,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5520,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,10,0,0
+1773906161597,5,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5761,287,5,6,null,0,5258,0
+1773906166856,5,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,5,0,0
+1773906163155,4,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5333,689,5,6,null,0,4203,0
+1773906167359,4,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906167359,2,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-4,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,2,0,0
+1773906167361,2,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906163585,3,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5761,287,5,6,null,0,4314,0
+1773906167899,3,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906164117,4,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4153,352,5,6,null,0,4824,0
+1773906168942,4,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4153,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,4,0,0
+1773906166075,5,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5333,689,5,6,null,0,4298,0
+1773906170373,5,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906170373,2,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-5,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,2,0,0
+1773906170375,3,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906166861,3,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4155,352,5,6,null,0,4405,0
+1773906171265,3,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4155,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,3,0,0
+1773906165807,4,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5761,287,1,6,null,0,5994,0
+1773906171800,4,GET - Home Page,200,,TG2 - Order Verification Journey 2-1,text,true,,5761,287,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906167903,2,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4151,352,5,6,null,0,4307,0
+1773906172208,2,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4151,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,2,0,0
+1773906167364,3,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5761,287,5,6,null,0,5246,0
+1773906172608,3,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906168946,5,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5486,810,5,6,null,0,4163,0
+1773906173107,5,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906173107,3,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-1,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,3,0,0
+1773906173110,2,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906170378,4,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5761,287,5,6,null,0,4316,0
+1773906174692,4,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906171268,5,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5486,810,5,6,null,0,4323,0
+1773906175590,5,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906175590,2,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-2,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,2,0,0
+1773906175593,2,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906172211,6,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5486,810,5,6,null,0,4683,0
+1773906176893,6,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906176893,4,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-3,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,4,0,0
+1773906176897,2,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906172612,4,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4151,352,5,6,null,0,4291,0
+1773906176903,4,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4151,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,4,0,0
+1773906171805,4,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,4151,352,1,6,null,0,5167,0
+1773906176972,4,GET - Sign In Page,200,,TG2 - Order Verification Journey 2-1,text,true,,4151,352,1,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,4,0,0
+1773906178016,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,23,0,5,6,null,0,0,0
+1773906174697,3,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4151,352,5,6,null,0,3956,0
+1773906178653,3,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4151,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,3,0,0
+1773906180487,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,23,0,5,6,null,0,0,0
+1773906176907,7,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5486,810,5,6,null,0,3930,0
+1773906180837,7,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906180837,3,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-4,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,3,0,0
+1773906180840,4,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906181206,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,23,0,5,6,null,0,0,0
+1773906176976,7,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5486,810,1,6,null,0,5429,0
+1773906182405,7,POST - Login,200,,TG2 - Order Verification Journey 2-1,text,true,,5486,810,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906182405,4,POST - Login-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,470,1,6,http://localhost:8080/jpetstore/actions/Account.action,4,0,0
+1773906182410,2,POST - Login-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5298,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906178017,6,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4526,370,5,6,null,0,4750,2
+1773906182767,6,GET - View Category: DOGS,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4526,370,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=DOGS,6,0,2
+1773906178656,4,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5486,810,5,6,null,0,4164,0
+1773906182819,4,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906182819,3,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-5,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,3,0,0
+1773906182822,1,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906180489,5,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4222,370,5,6,null,0,4699,1
+1773906185188,5,GET - View Category: FISH,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4222,370,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=FISH,5,0,1
+1773906181207,3,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,3936,370,5,6,null,0,4143,0
+1773906185350,3,GET - View Category: CATS,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,3936,370,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=CATS,3,0,0
+1773906185609,0,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,24,0,5,6,null,0,0,0
+1773906186634,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,24,0,5,6,null,0,0,0
+1773906182773,6,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4406,372,5,6,null,0,4244,0
+1773906187017,6,GET - View Product: K9-BD-01,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4406,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=K9-BD-01,6,0,0
+1773906182412,12,TC04 - View My Orders,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,4195,350,1,6,null,0,5429,0
+1773906187839,12,GET - My Orders,200,,TG2 - Order Verification Journey 2-1,text,true,,4195,350,1,6,http://localhost:8080/jpetstore/actions/Order.action?listOrders=,12,0,0
+1773906185610,5,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,3940,371,5,6,null,0,3975,1
+1773906189585,5,GET - View Category: BIRDS,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,3940,371,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=BIRDS,5,0,1
+1773906185353,5,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4400,373,5,6,null,0,4596,0
+1773906189949,5,GET - View Product: FL-DSH-01,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4400,373,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=FL-DSH-01,5,0,0
+1773906185193,6,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4400,372,5,6,null,0,5115,0
+1773906190308,6,GET - View Product: FI-SW-01,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4400,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=FI-SW-01,6,0,0
+1773906186636,5,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,3940,371,5,6,null,0,3768,1
+1773906190404,5,GET - View Category: BIRDS,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,3940,371,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=BIRDS,5,0,1
+1773906187023,7,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4965,372,5,6,null,0,4822,0
+1773906191844,7,GET - Add to Cart: EST-6,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4965,372,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-6,7,0,0
+1773906187853,7,TC05 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5333,689,1,6,null,0,4946,0
+1773906192799,7,GET - Logout,200,,TG2 - Order Verification Journey 2-1,text,true,,5333,689,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906192799,4,GET - Logout-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,349,1,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,4,0,0
+1773906192803,3,GET - Logout-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5145,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906189590,6,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4111,372,5,6,null,0,4337,0
+1773906193927,6,GET - View Product: AV-CB-01,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4111,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=AV-CB-01,6,0,0
+1773906189954,6,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4965,373,5,6,null,0,4687,0
+1773906194640,6,GET - Add to Cart: EST-14,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4965,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-14,6,0,0
+1773906190315,6,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4962,372,5,6,null,0,4620,0
+1773906194935,6,GET - Add to Cart: EST-1,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4962,372,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-1,6,0,0
+1773906190409,3,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4111,372,5,6,null,0,4602,0
+1773906195010,3,GET - View Product: AV-CB-01,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4111,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=AV-CB-01,3,0,0
+1773906191852,4,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5688,352,5,6,null,0,4050,0
+1773906195902,4,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,4,0,0
+1773906193933,7,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4978,373,5,6,null,0,4175,0
+1773906198108,7,GET - Add to Cart: EST-18,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4978,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-18,7,0,0
+1773906192807,4,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5761,287,1,6,null,0,5359,0
+1773906198167,4,GET - Home Page,200,,TG2 - Order Verification Journey 2-1,text,true,,5761,287,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906194647,4,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5688,352,5,6,null,0,3995,0
+1773906198643,4,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,4,0,0
+1773906194941,2,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5688,352,5,6,null,0,3835,0
+1773906198776,2,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,2,0,0
+1773906195014,7,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4978,373,5,6,null,0,5317,0
+1773906200331,7,GET - Add to Cart: EST-18,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4978,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-18,7,0,0
+1773906195906,6,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4818,713,5,6,null,0,4584,0
+1773906200490,6,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,6,0,0
+1773906198172,6,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,4151,352,1,6,null,0,4224,0
+1773906202394,6,GET - Sign In Page,200,,TG2 - Order Verification Journey 2-1,text,true,,4151,352,1,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,6,0,0
+1773906198647,4,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4818,713,5,6,null,0,4243,0
+1773906202889,4,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,4,0,0
+1773906198779,5,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4818,713,5,6,null,0,4478,0
+1773906203256,5,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,5,0,0
+1773906198116,7,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5688,352,5,6,null,0,5382,0
+1773906203497,7,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,7,0,0
+1773906200339,5,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5688,352,5,6,null,0,3942,0
+1773906204280,5,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,4,0,0
+1773906200497,12,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5515,363,5,6,null,0,4701,0
+1773906205195,12,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5515,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,12,0,0
+1773906202893,9,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5512,363,5,6,null,0,4286,0
+1773906207177,9,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5512,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,9,0,0
+1773906203261,11,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5512,363,5,6,null,0,4487,0
+1773906207746,11,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5512,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,11,0,0
+1773906203504,8,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4818,713,5,6,null,0,4629,0
+1773906208132,8,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,8,0,0
+1773906202401,8,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5486,810,1,6,null,0,5900,1
+1773906208301,8,POST - Login,200,,TG2 - Order Verification Journey 2-1,text,true,,5486,810,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,1
+1773906208301,4,POST - Login-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,470,1,6,http://localhost:8080/jpetstore/actions/Account.action,4,0,1
+1773906208305,4,POST - Login-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5298,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906204285,4,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4818,713,5,6,null,0,4649,0
+1773906208934,4,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,4,0,0
+1773906205209,7,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5333,689,5,6,null,0,4660,0
+1773906209868,7,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906209868,4,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-1,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,4,0,0
+1773906209873,2,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906207188,5,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5333,689,5,6,null,0,4495,0
+1773906211683,5,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906211683,3,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-3,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,3,0,0
+1773906211686,2,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906208141,11,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5526,363,5,6,null,0,4362,0
+1773906212501,11,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5526,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,11,0,0
+1773906207759,9,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5333,689,5,6,null,0,5124,0
+1773906212883,9,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906212883,4,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-2,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,4,0,0
+1773906212887,5,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,5,0,0
+1773906208938,9,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5526,363,5,6,null,0,4978,0
+1773906213914,9,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5526,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,9,0,0
+1773906209876,3,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5761,287,5,6,null,0,4562,0
+1773906214438,3,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906208309,10,TC04 - View My Orders,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,4990,350,1,6,null,0,6449,0
+1773906214756,10,GET - My Orders,200,,TG2 - Order Verification Journey 2-1,text,true,,4990,350,1,6,http://localhost:8080/jpetstore/actions/Order.action?listOrders=,10,0,0
+1773906211689,3,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5761,287,5,6,null,0,3752,0
+1773906215441,3,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906212514,3,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5333,689,5,6,null,0,4201,0
+1773906216714,3,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906216714,1,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-4,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,1,0,0
+1773906216716,1,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906214441,4,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4155,352,5,6,null,0,3891,0
+1773906218332,4,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4155,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,4,0,0
+1773906212893,6,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5761,287,5,6,null,0,5728,0
+1773906218621,6,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,6,0,0
+1773906213925,5,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5333,689,5,6,null,0,5141,0
+1773906219065,5,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906219065,3,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-5,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,3,0,0
+1773906219068,2,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906215444,5,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4155,352,5,6,null,0,5131,0
+1773906220575,5,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4155,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,5,0,0
+1773906214768,6,TC05 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5333,689,1,6,null,0,6250,0
+1773906221018,6,GET - Logout,200,,TG2 - Order Verification Journey 2-1,text,true,,5333,689,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906221018,3,GET - Logout-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,349,1,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,3,0,0
+1773906221022,2,GET - Logout-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5145,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906216718,2,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5761,287,5,6,null,0,4432,0
+1773906221149,2,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906218627,3,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4153,352,5,6,null,0,3614,0
+1773906222241,3,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4153,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,3,0,0
+1773906218336,12,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5486,810,5,6,null,0,4798,0
+1773906223133,12,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,8,0,0
+1773906223133,8,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-1,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,8,0,0
+1773906223141,4,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906219071,3,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5761,287,5,6,null,0,4718,0
+1773906223789,3,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906220580,5,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5486,810,5,6,null,0,4686,0
+1773906225266,5,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906225266,3,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-3,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,3,0,0
+1773906225269,2,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906222244,5,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5486,810,5,6,null,0,3918,0
+1773906226161,5,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906226161,2,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-2,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,2,0,0
+1773906226164,2,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906221025,4,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5761,287,1,6,null,0,5193,0
+1773906226218,4,GET - Home Page,200,,TG2 - Order Verification Journey 2-1,text,true,,5761,287,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906221152,6,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4153,352,5,6,null,0,5392,0
+1773906226543,6,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4153,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,6,0,0
+1773906227363,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,27,0,5,6,null,0,0,0
+1773906223792,3,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4155,352,5,6,null,0,3958,0
+1773906227750,3,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4155,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,3,0,0
+1773906230435,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,23,0,5,6,null,0,0,0
+1773906230821,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,23,0,5,6,null,0,0,0
+1773906226550,7,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5486,810,5,6,null,0,4839,0
+1773906231388,7,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906231388,4,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-4,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,4,0,0
+1773906231392,3,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906227364,7,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,3942,374,5,6,null,0,4184,0
+1773906231548,7,GET - View Category: REPTILES,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,3942,374,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=REPTILES,7,0,0
+1773906227753,6,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5486,810,5,6,null,0,4574,0
+1773906232327,6,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906232327,3,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-5,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,3,0,0
+1773906232330,3,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906226222,5,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,4153,352,1,6,null,0,6241,0
+1773906232463,5,GET - Sign In Page,200,,TG2 - Order Verification Journey 2-1,text,true,,4153,352,1,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,5,0,0
+1773906230436,4,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,3936,370,5,6,null,0,4546,0
+1773906234982,4,GET - View Category: CATS,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,3936,370,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=CATS,4,0,0
+1773906230822,4,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4222,370,5,6,null,0,4243,0
+1773906235065,4,GET - View Category: FISH,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4222,370,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=FISH,4,0,0
+1773906235607,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,23,0,5,6,null,0,0,0
+1773906231555,7,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4429,372,5,6,null,0,4248,0
+1773906235803,7,GET - View Product: RP-SN-01,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4429,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=RP-SN-01,7,0,0
+1773906236859,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,24,0,5,6,null,0,0,0
+1773906232468,7,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5486,810,1,6,null,0,5160,0
+1773906237628,7,POST - Login,200,,TG2 - Order Verification Journey 2-1,text,true,,5486,810,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906237628,4,POST - Login-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,470,1,6,http://localhost:8080/jpetstore/actions/Account.action,4,0,0
+1773906237632,3,POST - Login-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5298,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906234987,7,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4400,373,5,6,null,0,3856,0
+1773906238843,7,GET - View Product: FL-DSH-01,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4400,373,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=FL-DSH-01,7,0,0
+1773906235069,5,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4400,372,5,6,null,0,4311,0
+1773906239380,5,GET - View Product: FI-SW-01,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4400,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=FI-SW-01,5,0,0
+1773906235810,9,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4972,373,5,6,null,0,3732,0
+1773906239542,9,GET - Add to Cart: EST-11,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4972,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-11,9,0,0
+1773906235608,7,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4526,370,5,6,null,0,4438,0
+1773906240046,7,GET - View Category: DOGS,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4526,370,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=DOGS,7,0,0
+1773906236860,11,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,3940,371,5,6,null,0,4537,0
+1773906241397,11,GET - View Category: BIRDS,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,3940,371,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=BIRDS,11,0,0
+1773906237635,12,TC04 - View My Orders,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,4990,350,1,6,null,0,5365,0
+1773906242998,12,GET - My Orders,200,,TG2 - Order Verification Journey 2-1,text,true,,4990,350,1,6,http://localhost:8080/jpetstore/actions/Order.action?listOrders=,12,0,0
+1773906238850,13,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4965,373,5,6,null,0,4349,0
+1773906243199,13,GET - Add to Cart: EST-14,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4965,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-14,12,0,0
+1773906239551,6,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5688,352,5,6,null,0,4118,1
+1773906243669,6,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,6,0,1
+1773906239386,9,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4962,372,5,6,null,0,5148,0
+1773906244534,9,GET - Add to Cart: EST-1,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4962,372,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-1,8,0,0
+1773906240053,6,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4406,372,5,6,null,0,4610,0
+1773906244662,6,GET - View Product: K9-BD-01,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4406,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=K9-BD-01,6,0,0
+1773906241408,11,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4111,372,5,6,null,0,5176,0
+1773906246584,11,GET - View Product: AV-CB-01,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4111,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=AV-CB-01,11,0,0
+1773906243212,4,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5688,352,5,6,null,0,3954,1
+1773906247166,4,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,4,0,1
+1773906243013,7,TC05 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5333,689,1,6,null,0,5902,0
+1773906248915,7,GET - Logout,200,,TG2 - Order Verification Journey 2-1,text,true,,5333,689,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906248915,3,GET - Logout-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,349,1,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,3,0,0
+1773906248919,3,GET - Logout-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5145,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906244543,4,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5688,352,5,6,null,0,4390,0
+1773906248933,4,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,4,0,0
+1773906243675,7,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4818,713,5,6,null,0,5582,0
+1773906249257,7,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,7,0,0
+1773906244669,7,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4965,372,5,6,null,0,5665,0
+1773906250334,7,GET - Add to Cart: EST-6,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4965,372,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-6,7,0,0
+1773906247171,5,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4818,713,5,6,null,0,3619,0
+1773906250790,5,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,5,0,0
+1773906246595,6,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4978,373,5,6,null,0,4497,1
+1773906251092,6,GET - Add to Cart: EST-18,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4978,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-18,6,0,1
+1773906248937,4,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4818,713,5,6,null,0,4735,0
+1773906253672,4,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,4,0,0
+1773906249264,12,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5520,363,5,6,null,0,4664,0
+1773906253926,12,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5520,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,12,0,0
+1773906248922,3,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5761,287,1,6,null,0,5052,0
+1773906253973,3,GET - Home Page,200,,TG2 - Order Verification Journey 2-1,text,true,,5761,287,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906250341,6,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5688,352,5,6,null,0,4010,0
+1773906254350,6,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,6,0,0
+1773906250795,6,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5512,363,5,6,null,0,4857,0
+1773906255650,6,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5512,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,6,0,0
+1773906251098,3,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5688,352,5,6,null,0,4591,0
+1773906255689,3,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,3,0,0
+1773906253940,5,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5333,689,5,6,null,0,3951,0
+1773906257891,5,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906257891,2,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-1,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,2,0,0
+1773906257894,2,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906254357,4,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4818,713,5,6,null,0,3649,0
+1773906258006,4,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,4,0,0
+1773906253676,7,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5512,363,5,6,null,0,4888,0
+1773906258563,7,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5512,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,7,0,0
+1773906253977,5,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,4153,352,1,6,null,0,5261,0
+1773906259238,5,GET - Sign In Page,200,,TG2 - Order Verification Journey 2-1,text,true,,4153,352,1,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,5,0,0
+1773906255692,3,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4818,713,5,6,null,0,4484,0
+1773906260176,3,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,3,0,0
+1773906255658,5,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5333,689,5,6,null,0,5353,0
+1773906261011,5,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906261011,3,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-2,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,3,0,0
+1773906261014,2,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906258571,4,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5333,689,5,6,null,0,4310,0
+1773906262882,4,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906262882,2,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-3,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,2,0,0
+1773906262884,2,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906258010,8,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5515,363,5,6,null,0,4923,0
+1773906262933,8,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5515,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,8,0,0
+1773906257897,4,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5761,287,5,6,null,0,5250,0
+1773906263148,4,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906259243,5,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5486,810,1,6,null,0,4432,0
+1773906263676,5,POST - Login,200,,TG2 - Order Verification Journey 2-1,text,true,,5486,810,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906263676,3,POST - Login-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,470,1,6,http://localhost:8080/jpetstore/actions/Account.action,3,0,0
+1773906263679,2,POST - Login-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5298,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906260180,7,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5526,363,5,6,null,0,4007,0
+1773906264187,7,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5526,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,7,0,0
+1773906261017,4,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5761,287,5,6,null,0,4609,0
+1773906265626,4,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906262942,3,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5333,689,5,6,null,0,4362,0
+1773906267302,3,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906267302,2,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-4,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,2,0,0
+1773906267304,1,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906263152,3,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4153,352,5,6,null,0,4244,0
+1773906267395,3,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4153,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,3,0,0
+1773906262887,2,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5761,287,5,6,null,0,4622,0
+1773906267508,2,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906264195,4,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5333,689,5,6,null,0,4804,0
+1773906268998,4,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906268998,2,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-5,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,2,0,0
+1773906269000,2,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906263681,8,TC04 - View My Orders,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,4992,350,1,6,null,0,5809,0
+1773906269487,8,GET - My Orders,200,,TG2 - Order Verification Journey 2-1,text,true,,4992,350,1,6,http://localhost:8080/jpetstore/actions/Order.action?listOrders=,8,0,0
+1773906265630,2,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4151,352,5,6,null,0,4174,0
+1773906269803,2,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4151,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,2,0,0
+1773906267306,3,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5761,287,5,6,null,0,4151,0
+1773906271457,3,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906267398,4,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5486,810,5,6,null,0,4877,0
+1773906272274,4,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906272274,2,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-1,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,2,0,0
+1773906272277,1,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906267510,4,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4155,352,5,6,null,0,5761,0
+1773906273271,4,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4155,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,4,0,0
+1773906269003,3,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5761,287,5,6,null,0,4705,0
+1773906273708,3,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906269805,3,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5486,810,5,6,null,0,3963,0
+1773906273768,3,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906273768,1,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-2,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,1,0,0
+1773906273769,2,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906269497,6,TC05 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5333,689,1,6,null,0,5801,0
+1773906275298,6,GET - Logout,200,,TG2 - Order Verification Journey 2-1,text,true,,5333,689,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906275298,3,GET - Logout-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,349,1,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,3,0,0
+1773906275301,3,GET - Logout-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5145,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906271460,3,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4153,352,5,6,null,0,4567,0
+1773906276027,3,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4153,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,2,0,0
+1773906276450,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,24,0,5,6,null,0,0,0
+1773906278337,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,23,0,5,6,null,0,0,0
+1773906273711,4,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4153,352,5,6,null,0,4664,0
+1773906278375,4,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4153,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,4,0,0
+1773906273275,10,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5486,810,5,6,null,0,5330,0
+1773906278604,10,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906278604,3,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-3,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,3,0,0
+1773906278607,7,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,7,0,0
+1773906276030,5,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5486,810,5,6,null,0,4245,0
+1773906280274,5,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906280274,3,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-4,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,3,0,0
+1773906280277,2,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906275304,3,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5761,287,1,6,null,0,5102,0
+1773906280406,3,GET - Home Page,200,,TG2 - Order Verification Journey 2-1,text,true,,5761,287,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906276451,5,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,3940,371,5,6,null,0,4330,0
+1773906280781,5,GET - View Category: BIRDS,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,3940,371,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=BIRDS,5,0,0
+1773906278379,5,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5486,810,5,6,null,0,4557,0
+1773906282936,5,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906282936,2,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-5,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,2,0,0
+1773906282938,3,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906278338,4,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,3936,370,5,6,null,0,4883,0
+1773906283221,4,GET - View Category: CATS,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,3936,370,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=CATS,4,0,0
+1773906283508,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,24,0,5,6,null,0,0,0
+1773906280409,4,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,4151,352,1,6,null,0,3883,0
+1773906284292,4,GET - Sign In Page,200,,TG2 - Order Verification Journey 2-1,text,true,,4151,352,1,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,4,0,0
+1773906284415,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,23,0,5,6,null,0,0,0
+1773906280786,6,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4111,372,5,6,null,0,5264,0
+1773906286050,6,GET - View Product: AV-CB-01,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4111,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=AV-CB-01,6,0,0
+1773906283509,5,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,3940,371,5,6,null,0,3138,0
+1773906286647,5,GET - View Category: BIRDS,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,3940,371,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=BIRDS,5,0,0
+1773906288201,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,27,0,5,6,null,0,0,0
+1773906283225,7,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4400,373,5,6,null,0,5251,0
+1773906288476,7,GET - View Product: FL-DSH-01,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4400,373,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=FL-DSH-01,7,0,0
+1773906284416,4,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,3936,370,5,6,null,0,4941,0
+1773906289357,4,GET - View Category: CATS,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,3936,370,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=CATS,4,0,0
+1773906284296,8,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5486,810,1,6,null,0,5506,0
+1773906289801,8,POST - Login,200,,TG2 - Order Verification Journey 2-1,text,true,,5486,810,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,5,0,0
+1773906289801,5,POST - Login-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,470,1,6,http://localhost:8080/jpetstore/actions/Account.action,5,0,0
+1773906289806,3,POST - Login-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5298,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906286056,7,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4978,373,5,6,null,0,4336,0
+1773906290392,7,GET - Add to Cart: EST-18,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4978,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-18,7,0,0
+1773906286652,4,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4111,372,5,6,null,0,4408,0
+1773906291061,4,GET - View Product: AV-CB-01,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4111,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=AV-CB-01,4,0,0
+1773906288202,5,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,3942,374,5,6,null,0,3865,0
+1773906292068,5,GET - View Category: REPTILES,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,3942,374,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=REPTILES,5,0,0
+1773906288483,5,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4965,373,5,6,null,0,4595,0
+1773906293079,5,GET - Add to Cart: EST-14,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4965,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-14,5,0,0
+1773906290399,4,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5688,352,5,6,null,0,3455,0
+1773906293855,4,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,4,0,0
+1773906289361,3,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4400,373,5,6,null,0,4872,0
+1773906294234,3,GET - View Product: FL-DSH-01,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4400,373,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=FL-DSH-01,3,0,0
+1773906289810,7,TC04 - View My Orders,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,4992,350,1,6,null,0,4658,0
+1773906294467,7,GET - My Orders,200,,TG2 - Order Verification Journey 2-1,text,true,,4992,350,1,6,http://localhost:8080/jpetstore/actions/Order.action?listOrders=,7,0,0
+1773906292073,5,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4429,372,5,6,null,0,3410,0
+1773906295482,5,GET - View Product: RP-SN-01,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4429,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=RP-SN-01,5,0,0
+1773906291065,5,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4978,373,5,6,null,0,4543,0
+1773906295608,5,GET - Add to Cart: EST-18,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4978,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-18,5,0,0
+1773906293859,4,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4818,713,5,6,null,0,4184,0
+1773906298042,4,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,4,0,0
+1773906293084,5,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5688,352,5,6,null,0,5184,0
+1773906298267,5,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,5,0,0
+1773906294237,4,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4965,373,5,6,null,0,4136,0
+1773906298372,4,GET - Add to Cart: EST-14,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4965,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-14,4,0,0
+1773906294476,6,TC05 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5333,689,1,6,null,0,4627,0
+1773906299102,6,GET - Logout,200,,TG2 - Order Verification Journey 2-1,text,true,,5333,689,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906299102,3,GET - Logout-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,349,1,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,3,0,0
+1773906299105,3,GET - Logout-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5145,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906295488,5,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4972,373,5,6,null,0,3759,0
+1773906299246,5,GET - Add to Cart: EST-11,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4972,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-11,5,0,0
+1773906295613,3,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5688,352,5,6,null,0,5346,0
+1773906300957,3,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,3,0,0
+1773906298376,8,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5688,352,5,6,null,0,3977,0
+1773906302353,8,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,8,0,0
+1773906298272,3,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4818,713,5,6,null,0,4603,0
+1773906302874,3,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,3,0,0
+1773906298046,9,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5526,363,5,6,null,0,5254,0
+1773906303299,9,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5526,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,9,0,0
+1773906299251,4,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5688,352,5,6,null,0,4747,0
+1773906303998,4,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,4,0,0
+1773906299109,5,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5761,287,1,6,null,0,6121,0
+1773906305230,5,GET - Home Page,200,,TG2 - Order Verification Journey 2-1,text,true,,5761,287,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,5,0,0
+1773906300961,3,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4818,713,5,6,null,0,4279,0
+1773906305240,3,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,3,0,0
+1773906302361,3,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4818,713,5,6,null,0,3353,0
+1773906305714,3,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,3,0,0
+1773906302878,6,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5512,363,5,6,null,0,3801,0
+1773906306678,6,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5512,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,6,0,0
+1773906304002,4,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4818,713,5,6,null,0,3690,0
+1773906307692,4,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,4,0,0
+1773906303309,4,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5333,689,5,6,null,0,4967,1
+1773906308276,4,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,1
+1773906308276,2,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-1,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,2,0,1
+1773906308278,2,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906305235,3,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,4153,352,1,6,null,0,4279,0
+1773906309513,3,GET - Sign In Page,200,,TG2 - Order Verification Journey 2-1,text,true,,4153,352,1,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,3,0,0
+1773906305243,7,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5526,363,5,6,null,0,5062,1
+1773906310303,7,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5526,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,7,0,1
+1773906305717,7,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5512,363,5,6,null,0,5242,1
+1773906310958,7,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5512,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,7,0,1
+1773906306685,5,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5333,689,5,6,null,0,4987,1
+1773906311672,5,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,1
+1773906311672,2,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-2,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,2,0,1
+1773906311674,3,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906307696,6,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5520,363,5,6,null,0,4097,0
+1773906311792,6,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5520,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,6,0,0
+1773906308280,4,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5761,287,5,6,null,0,5348,0
+1773906313628,4,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906309517,4,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5486,810,1,6,null,0,4215,0
+1773906313732,4,POST - Login,200,,TG2 - Order Verification Journey 2-1,text,true,,5486,810,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906313732,2,POST - Login-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,470,1,6,http://localhost:8080/jpetstore/actions/Account.action,2,0,0
+1773906313734,2,POST - Login-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5298,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906310312,3,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5333,689,5,6,null,0,4261,0
+1773906314573,3,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906314573,1,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-3,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,1,0,0
+1773906314574,2,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906310966,5,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5333,689,5,6,null,0,4273,0
+1773906315238,5,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906315238,3,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-4,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,3,0,0
+1773906315241,2,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906311799,3,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5333,689,5,6,null,0,3608,0
+1773906315407,3,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906315407,1,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-5,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,1,0,0
+1773906315408,2,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906311678,4,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5761,287,5,6,null,0,4307,0
+1773906315985,4,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906313736,12,TC04 - View My Orders,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5787,350,1,6,null,0,4924,0
+1773906318659,12,GET - My Orders,200,,TG2 - Order Verification Journey 2-1,text,true,,5787,350,1,6,http://localhost:8080/jpetstore/actions/Order.action?listOrders=,12,0,0
+1773906313632,4,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4155,352,5,6,null,0,5273,0
+1773906318905,4,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4155,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,4,0,0
+1773906314577,2,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5761,287,5,6,null,0,4524,0
+1773906319100,2,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906315244,3,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5761,287,5,6,null,0,4847,0
+1773906320091,3,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906315410,4,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5761,287,5,6,null,0,5310,0
+1773906320720,4,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906315989,3,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4155,352,5,6,null,0,5461,0
+1773906321450,3,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4155,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,3,0,0
+1773906318909,4,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5486,810,5,6,null,0,3884,0
+1773906322793,4,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906322793,2,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-1,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,2,0,0
+1773906322795,2,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906319103,4,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4155,352,5,6,null,0,4438,0
+1773906323541,4,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4155,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,4,0,0
+1773906318672,5,TC05 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5333,689,1,6,null,0,5946,0
+1773906324618,5,GET - Logout,200,,TG2 - Order Verification Journey 2-1,text,true,,5333,689,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906324618,3,GET - Logout-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,349,1,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,3,0,0
+1773906324621,2,GET - Logout-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5145,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906320094,1,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4153,352,5,6,null,0,4602,0
+1773906324695,1,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4153,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,1,0,0
+1773906320725,2,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4153,352,5,6,null,0,4539,0
+1773906325263,2,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4153,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,2,0,0
+1773906321453,4,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5486,810,5,6,null,0,4067,0
+1773906325520,4,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906325520,2,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-2,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,2,0,0
+1773906325522,2,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906323545,4,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5486,810,5,6,null,0,3988,0
+1773906327533,4,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906327533,2,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-3,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,2,0,0
+1773906327535,2,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906327706,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,24,0,5,6,null,0,0,0
+1773906324697,6,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5486,810,5,6,null,0,4960,0
+1773906329657,6,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906329657,3,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-4,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,3,0,0
+1773906329661,2,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906325266,4,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5486,810,5,6,null,0,4556,0
+1773906329821,4,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906329821,2,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-5,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,2,0,0
+1773906329823,2,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906324624,3,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5761,287,1,6,null,0,5356,1
+1773906329979,3,GET - Home Page,200,,TG2 - Order Verification Journey 2-1,text,true,,5761,287,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,1
+1773906330544,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,24,0,5,6,null,0,0,0
+1773906327707,5,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,3940,371,5,6,null,0,4928,0
+1773906332635,5,GET - View Category: BIRDS,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,3940,371,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=BIRDS,5,0,0
+1773906333049,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,24,0,5,6,null,0,0,0
+1773906333904,0,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,23,0,5,6,null,0,0,0
+1773906334026,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,23,0,5,6,null,0,0,0
+1773906329983,4,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,4155,352,1,6,null,0,4140,0
+1773906334123,4,GET - Sign In Page,200,,TG2 - Order Verification Journey 2-1,text,true,,4155,352,1,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,4,0,0
+1773906330546,4,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,3940,371,5,6,null,0,4055,0
+1773906334601,4,GET - View Category: BIRDS,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,3940,371,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=BIRDS,4,0,0
+1773906332640,6,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4111,372,5,6,null,0,4037,0
+1773906336677,6,GET - View Product: AV-CB-01,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4111,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=AV-CB-01,6,0,0
+1773906333050,6,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,3940,371,5,6,null,0,4659,0
+1773906337709,6,GET - View Category: BIRDS,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,3940,371,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=BIRDS,6,0,0
+1773906333904,4,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4222,370,5,6,null,0,4518,0
+1773906338422,4,GET - View Category: FISH,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4222,370,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=FISH,4,0,0
+1773906334027,4,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4222,370,5,6,null,0,4464,0
+1773906338491,4,GET - View Category: FISH,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4222,370,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=FISH,4,0,0
+1773906334127,6,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5486,810,1,6,null,0,5660,0
+1773906339787,6,POST - Login,200,,TG2 - Order Verification Journey 2-1,text,true,,5486,810,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906339787,3,POST - Login-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,470,1,6,http://localhost:8080/jpetstore/actions/Account.action,3,0,0
+1773906339790,3,POST - Login-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5298,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906334605,4,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4111,372,5,6,null,0,5201,0
+1773906339806,4,GET - View Product: AV-CB-01,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4111,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=AV-CB-01,4,0,0
+1773906336683,6,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4978,373,5,6,null,0,4425,0
+1773906341108,6,GET - Add to Cart: EST-18,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4978,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-18,6,0,0
+1773906337715,3,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4111,372,5,6,null,0,3887,0
+1773906341601,3,GET - View Product: AV-CB-01,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4111,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=AV-CB-01,3,0,0
+1773906338426,4,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4400,372,5,6,null,0,4261,0
+1773906342687,4,GET - View Product: FI-SW-01,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4400,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=FI-SW-01,4,0,0
+1773906338495,2,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4400,372,5,6,null,0,4900,0
+1773906343394,2,GET - View Product: FI-SW-01,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4400,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=FI-SW-01,2,0,0
+1773906339810,3,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4978,373,5,6,null,0,3816,0
+1773906343626,3,GET - Add to Cart: EST-18,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4978,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-18,3,0,0
+1773906341114,4,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5688,352,5,6,null,0,3916,0
+1773906345029,4,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,4,0,0
+1773906339793,9,TC04 - View My Orders,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5787,350,1,6,null,0,5776,0
+1773906345567,9,GET - My Orders,200,,TG2 - Order Verification Journey 2-1,text,true,,5787,350,1,6,http://localhost:8080/jpetstore/actions/Order.action?listOrders=,9,0,0
+1773906341605,4,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4978,373,5,6,null,0,4055,0
+1773906345660,4,GET - Add to Cart: EST-18,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4978,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-18,4,0,0
+1773906342691,6,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4962,372,5,6,null,0,4545,0
+1773906347237,6,GET - Add to Cart: EST-1,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4962,372,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-1,6,0,0
+1773906343629,2,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5688,352,5,6,null,0,4061,0
+1773906347690,2,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,2,0,0
+1773906343397,6,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4962,372,5,6,null,0,4976,0
+1773906348374,6,GET - Add to Cart: EST-1,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4962,372,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-1,6,0,0
+1773906345578,4,TC05 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5333,689,1,6,null,0,3736,0
+1773906349315,4,GET - Logout,200,,TG2 - Order Verification Journey 2-1,text,true,,5333,689,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906349315,1,GET - Logout-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,349,1,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,1,0,0
+1773906349317,2,GET - Logout-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5145,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906345034,5,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4818,713,5,6,null,0,4899,0
+1773906349934,5,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,5,0,0
+1773906345664,3,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5688,352,5,6,null,0,4414,0
+1773906350078,3,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,3,0,0
+1773906347693,3,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4818,713,5,6,null,0,3967,0
+1773906351659,3,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,3,0,0
+1773906347243,2,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5688,352,5,6,null,0,4625,0
+1773906351867,2,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,2,0,0
+1773906348380,3,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5688,352,5,6,null,0,3996,0
+1773906352375,3,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,3,0,0
+1773906349319,4,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5761,287,1,6,null,0,4941,0
+1773906354258,4,GET - Home Page,200,,TG2 - Order Verification Journey 2-1,text,true,,5761,287,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906350082,3,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4818,713,5,6,null,0,4587,0
+1773906354667,3,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,3,0,0
+1773906349939,8,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5526,363,5,6,null,0,4805,0
+1773906354742,8,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5526,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,8,0,0
+1773906352379,3,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4818,713,5,6,null,0,3715,0
+1773906356094,3,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,3,0,0
+1773906351870,2,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4818,713,5,6,null,0,4264,0
+1773906356134,2,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,2,0,0
+1773906351662,6,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5526,363,5,6,null,0,5329,0
+1773906356989,6,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5526,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,6,0,0
+1773906354671,7,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5526,363,5,6,null,0,4416,0
+1773906359086,7,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5526,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,7,0,0
+1773906354751,4,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5333,689,5,6,null,0,4466,0
+1773906359217,4,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906359217,2,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-1,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,2,0,0
+1773906359219,2,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906354263,5,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,4153,352,1,6,null,0,5848,0
+1773906360111,5,GET - Sign In Page,200,,TG2 - Order Verification Journey 2-1,text,true,,4153,352,1,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,5,0,0
+1773906356136,7,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5512,363,5,6,null,0,4172,0
+1773906360307,7,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5512,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,7,0,0
+1773906356097,6,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5512,363,5,6,null,0,4426,0
+1773906360522,6,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5512,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,5,0,0
+1773906356997,3,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5333,689,5,6,null,0,4721,0
+1773906361717,3,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906361717,2,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-2,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,2,0,0
+1773906361719,1,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906359222,3,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5761,287,5,6,null,0,3624,0
+1773906362846,3,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906359094,4,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5333,689,5,6,null,0,4253,0
+1773906363347,4,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906363347,1,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-3,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,1,0,0
+1773906363348,3,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906360315,3,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5333,689,5,6,null,0,3554,0
+1773906363869,3,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906363869,2,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-4,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,2,0,0
+1773906363871,1,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906360529,3,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5333,689,5,6,null,0,4543,0
+1773906365071,3,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5333,689,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906365071,2,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-5,,true,,188,349,5,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,2,0,0
+1773906365073,1,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5145,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906361721,2,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5761,287,5,6,null,0,4268,0
+1773906365988,2,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906360116,5,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5486,810,1,6,null,0,6373,0
+1773906366489,5,POST - Login,200,,TG2 - Order Verification Journey 2-1,text,true,,5486,810,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906366489,3,POST - Login-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,470,1,6,http://localhost:8080/jpetstore/actions/Account.action,3,0,0
+1773906366492,2,POST - Login-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5298,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906362849,3,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4155,352,5,6,null,0,4430,0
+1773906367279,3,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4155,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,3,0,0
+1773906363351,5,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5761,287,5,6,null,0,4511,0
+1773906367862,5,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,5,0,0
+1773906363872,2,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5761,287,5,6,null,0,4743,0
+1773906368615,2,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906365075,2,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5761,287,5,6,null,0,4444,0
+1773906369519,2,GET - Home Page,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5761,287,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906365991,3,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4153,352,5,6,null,0,3803,0
+1773906369794,3,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4153,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,3,0,0
+1773906367282,6,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5486,810,5,6,null,0,4827,1
+1773906372109,6,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,1
+1773906372109,3,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-1,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,3,0,1
+1773906372112,3,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906368618,4,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4153,352,5,6,null,0,3644,1
+1773906372262,4,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4153,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,4,0,1
+1773906366494,11,TC04 - View My Orders,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5789,350,1,6,null,0,5955,0
+1773906372448,11,GET - My Orders,200,,TG2 - Order Verification Journey 2-1,text,true,,5789,350,1,6,http://localhost:8080/jpetstore/actions/Order.action?listOrders=,11,0,0
+1773906367867,3,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4153,352,5,6,null,0,4727,0
+1773906372594,3,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4153,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,3,0,0
+1773906369521,3,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4153,352,5,6,null,0,4503,1
+1773906374024,3,GET - Sign In Page,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4153,352,5,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,3,0,1
+1773906369797,4,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5486,810,5,6,null,0,4674,1
+1773906374470,4,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,1
+1773906374470,3,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-2,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,3,0,1
+1773906374473,1,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906372266,5,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5486,810,5,6,null,0,3962,0
+1773906376229,5,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906376229,2,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-4,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,2,0,0
+1773906376231,3,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906376298,2,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,27,0,5,6,null,0,0,0
+1773906372597,4,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5486,810,5,6,null,0,4030,0
+1773906376628,4,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906376628,2,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-3,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,2,0,0
+1773906376630,2,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906374028,5,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5486,810,5,6,null,0,3678,0
+1773906377707,5,POST - Login,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5486,810,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906377707,3,POST - Login-0,302,,TG1 - Shopping Journey (Place Orders) 1-5,,true,,188,470,5,6,http://localhost:8080/jpetstore/actions/Account.action,3,0,0
+1773906377710,2,POST - Login-1,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5298,340,5,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906372460,6,TC05 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5333,689,1,6,null,0,6034,0
+1773906378495,6,GET - Logout,200,,TG2 - Order Verification Journey 2-1,text,true,,5333,689,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906378495,3,GET - Logout-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,349,1,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,3,0,0
+1773906378498,3,GET - Logout-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5145,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906379532,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,23,0,5,6,null,0,0,0
+1773906380887,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,23,0,5,6,null,0,0,0
+1773906376300,5,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,3942,374,5,6,null,0,5486,0
+1773906381785,5,GET - View Category: REPTILES,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,3942,374,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=REPTILES,5,0,0
+1773906381847,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,23,0,5,6,null,0,0,0
+1773906382228,1,Pick Random Category,200,OK,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,23,0,5,6,null,0,0,0
+1773906379533,4,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4526,370,5,6,null,0,3078,0
+1773906382609,4,GET - View Category: DOGS,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4526,370,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=DOGS,4,0,0
+1773906378501,6,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5761,287,1,6,null,0,5658,0
+1773906384158,6,GET - Home Page,200,,TG2 - Order Verification Journey 2-1,text,true,,5761,287,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,5,0,0
+1773906380888,4,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4222,370,5,6,null,0,4572,0
+1773906385459,4,GET - View Category: FISH,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4222,370,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=FISH,4,0,0
+1773906381848,6,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,3936,370,5,6,null,0,4555,0
+1773906386403,6,GET - View Category: CATS,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,3936,370,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=CATS,6,0,0
+1773906381790,6,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4429,372,5,6,null,0,4678,0
+1773906386468,6,GET - View Product: RP-SN-01,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4429,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=RP-SN-01,6,0,0
+1773906382614,5,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4406,372,5,6,null,0,4120,0
+1773906386734,5,GET - View Product: K9-BD-01,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4406,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=K9-BD-01,5,0,0
+1773906382229,3,TC04 - View Category,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,3936,370,5,6,null,0,4749,0
+1773906386977,3,GET - View Category: CATS,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,3936,370,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewCategory=&categoryId=CATS,3,0,0
+1773906385463,4,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4400,372,5,6,null,0,4197,0
+1773906389660,4,GET - View Product: FI-SW-01,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4400,372,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=FI-SW-01,4,0,0
+1773906384164,5,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,4153,352,1,6,null,0,5791,0
+1773906389955,5,GET - Sign In Page,200,,TG2 - Order Verification Journey 2-1,text,true,,4153,352,1,6,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,5,0,0
+1773906386981,5,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4400,373,5,6,null,0,3709,0
+1773906390690,5,GET - View Product: FL-DSH-01,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4400,373,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=FL-DSH-01,5,0,0
+1773906386409,3,TC05 - View Product,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4400,373,5,6,null,0,4737,0
+1773906391146,3,GET - View Product: FL-DSH-01,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4400,373,5,6,http://localhost:8080/jpetstore/actions/Catalog.action?viewProduct=&productId=FL-DSH-01,3,0,0
+1773906386474,5,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4972,373,5,6,null,0,4762,0
+1773906391236,5,GET - Add to Cart: EST-11,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4972,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-11,5,0,0
+1773906386739,5,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4965,372,5,6,null,0,4800,0
+1773906391539,5,GET - Add to Cart: EST-6,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4965,372,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-6,5,0,0
+1773906389960,5,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5486,810,1,6,null,0,3705,1
+1773906393665,5,POST - Login,200,,TG2 - Order Verification Journey 2-1,text,true,,5486,810,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,1
+1773906393665,3,POST - Login-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,470,1,6,http://localhost:8080/jpetstore/actions/Account.action,3,0,1
+1773906393668,2,POST - Login-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5298,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906389664,4,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4962,372,5,6,null,0,4144,0
+1773906393807,4,GET - Add to Cart: EST-1,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4962,372,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-1,4,0,0
+1773906391544,4,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5688,352,5,6,null,0,3584,0
+1773906395128,4,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,4,0,0
+1773906391149,5,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4965,373,5,6,null,0,4186,0
+1773906395334,5,GET - Add to Cart: EST-14,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4965,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-14,5,0,0
+1773906390695,3,TC06 - Add to Cart,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4965,373,5,6,null,0,4679,0
+1773906395374,3,GET - Add to Cart: EST-14,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4965,373,5,6,http://localhost:8080/jpetstore/actions/Cart.action?addItemToCart=&workingItemId=EST-14,3,0,0
+1773906391241,3,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5688,352,5,6,null,0,4362,0
+1773906395603,3,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,3,0,0
+1773906393670,7,TC04 - View My Orders,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5789,350,1,6,null,0,4524,0
+1773906398192,7,GET - My Orders,200,,TG2 - Order Verification Journey 2-1,text,true,,5789,350,1,6,http://localhost:8080/jpetstore/actions/Order.action?listOrders=,7,0,0
+1773906393812,3,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5688,352,5,6,null,0,4464,0
+1773906398276,3,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,3,0,0
+1773906395340,3,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5688,352,5,6,null,0,4055,0
+1773906399395,3,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,3,0,0
+1773906395377,3,TC07 - Proceed to Checkout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5688,352,5,6,null,0,4150,0
+1773906399527,3,GET - Checkout Form,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5688,352,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrderForm=,3,0,0
+1773906395132,4,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,4818,713,5,6,null,0,4979,0
+1773906400111,4,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,4,0,0
+1773906395606,3,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,4818,713,5,6,null,0,4855,0
+1773906400461,3,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,3,0,0
+1773906398279,4,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,4818,713,5,6,null,0,3882,0
+1773906402160,4,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,4,0,0
+1773906399398,2,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,4818,713,5,6,null,0,3928,0
+1773906403325,2,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,2,0,0
+1773906399530,3,TC08 - Submit Order (Continue),200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,4818,713,5,6,null,0,4098,0
+1773906403628,3,POST - Submit Order Form,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,4818,713,5,6,http://localhost:8080/jpetstore/actions/Order.action,3,0,0
+1773906398201,6,TC05 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5333,689,1,6,null,0,6399,0
+1773906404600,6,GET - Logout,200,,TG2 - Order Verification Journey 2-1,text,true,,5333,689,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906404600,3,GET - Logout-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,349,1,6,http://localhost:8080/jpetstore/actions/Account.action?signoff=,3,0,0
+1773906404603,3,GET - Logout-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5145,340,1,6,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906400464,6,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5520,363,5,6,null,0,4514,0
+1773906404976,6,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5520,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,6,0,0
+1773906400115,6,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5515,363,5,6,null,0,5293,0
+1773906405407,6,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5515,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,6,0,0
+1773906402165,9,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-4,,true,,5512,363,5,6,null,0,4588,0
+1773906406752,9,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-4,text,true,,5512,363,5,6,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,9,0,0
+1773906406763,0,TC10 - Logout,,,TG1 - Shopping Journey (Place Orders) 1-4,,true,,0,0,5,6,null,0,0,0
+1773906404606,2,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5761,287,1,5,null,0,3827,0
+1773906408434,2,GET - Home Page,200,,TG2 - Order Verification Journey 2-1,text,true,,5761,287,1,5,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906403328,7,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-5,,true,,5512,363,4,5,null,0,5165,0
+1773906408493,7,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-5,text,true,,5512,363,4,5,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,7,0,0
+1773906408501,0,TC10 - Logout,,,TG1 - Shopping Journey (Place Orders) 1-5,,true,,0,0,4,5,null,0,0,0
+1773906403631,7,TC09 - Confirm Order,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-3,,true,,5512,363,3,4,null,0,5359,0
+1773906408990,7,GET - Confirm Order,200,,TG1 - Shopping Journey (Place Orders) 1-3,text,true,,5512,363,3,4,http://localhost:8080/jpetstore/actions/Order.action?newOrder=&confirmed=true,7,0,0
+1773906408998,0,TC10 - Logout,,,TG1 - Shopping Journey (Place Orders) 1-3,,true,,0,0,3,4,null,0,0,0
+1773906404984,4,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-1,,true,,5333,689,2,3,null,0,4553,0
+1773906409538,4,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5333,689,2,3,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906409538,1,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-1,,true,,188,349,2,3,http://localhost:8080/jpetstore/actions/Account.action?signoff=,1,0,0
+1773906409540,2,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-1,text,true,,5145,340,2,3,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906409542,0,TC01 - Launch Home Page,,,TG1 - Shopping Journey (Place Orders) 1-1,,true,,0,0,2,3,null,0,0,0
+1773906405414,2,TC10 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG1 - Shopping Journey (Place Orders) 1-2,,true,,5333,689,1,2,null,0,4177,0
+1773906409592,2,GET - Logout,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5333,689,1,2,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906409592,1,GET - Logout-0,302,,TG1 - Shopping Journey (Place Orders) 1-2,,true,,188,349,1,2,http://localhost:8080/jpetstore/actions/Account.action?signoff=,1,0,0
+1773906409593,1,GET - Logout-1,200,,TG1 - Shopping Journey (Place Orders) 1-2,text,true,,5145,340,1,2,http://localhost:8080/jpetstore/actions/Catalog.action,1,0,0
+1773906409594,0,TC01 - Launch Home Page,,,TG1 - Shopping Journey (Place Orders) 1-2,,true,,0,0,1,2,null,0,0,0
+1773906408436,4,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,4151,352,1,1,null,0,5091,0
+1773906413526,4,GET - Sign In Page,200,,TG2 - Order Verification Journey 2-1,text,true,,4151,352,1,1,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,4,0,0
+1773906413530,6,TC03 - Login,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5486,810,1,1,null,0,5263,0
+1773906418793,6,POST - Login,200,,TG2 - Order Verification Journey 2-1,text,true,,5486,810,1,1,http://localhost:8080/jpetstore/actions/Catalog.action,4,0,0
+1773906418793,4,POST - Login-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,470,1,1,http://localhost:8080/jpetstore/actions/Account.action,4,0,0
+1773906418797,2,POST - Login-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5298,340,1,1,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906418799,10,TC04 - View My Orders,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,6583,350,1,1,null,0,4576,0
+1773906423374,10,GET - My Orders,200,,TG2 - Order Verification Journey 2-1,text,true,,6583,350,1,1,http://localhost:8080/jpetstore/actions/Order.action?listOrders=,10,0,0
+1773906423386,5,TC05 - Logout,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5333,689,1,1,null,0,4119,0
+1773906427505,5,GET - Logout,200,,TG2 - Order Verification Journey 2-1,text,true,,5333,689,1,1,http://localhost:8080/jpetstore/actions/Catalog.action,2,0,0
+1773906427505,2,GET - Logout-0,302,,TG2 - Order Verification Journey 2-1,,true,,188,349,1,1,http://localhost:8080/jpetstore/actions/Account.action?signoff=,2,0,0
+1773906427507,3,GET - Logout-1,200,,TG2 - Order Verification Journey 2-1,text,true,,5145,340,1,1,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906427510,3,TC01 - Launch Home Page,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,5761,287,1,1,null,0,4381,0
+1773906431891,3,GET - Home Page,200,,TG2 - Order Verification Journey 2-1,text,true,,5761,287,1,1,http://localhost:8080/jpetstore/actions/Catalog.action,3,0,0
+1773906431895,4,TC02 - Navigate to Sign In,200,"Number of samples in transaction : 1, number of failing samples : 0",TG2 - Order Verification Journey 2-1,,true,,4153,352,1,1,null,0,6220,0
+1773906438113,4,GET - Sign In Page,200,,TG2 - Order Verification Journey 2-1,text,true,,4153,352,1,1,http://localhost:8080/jpetstore/actions/Account.action?signonForm=,4,0,0
+1773906438118,0,TC03 - Login,,,TG2 - Order Verification Journey 2-1,,true,,0,0,1,1,null,0,0,0
