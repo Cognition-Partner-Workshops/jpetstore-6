@@ -1,0 +1,29 @@
+ITEM_ID,PRODUCT_ID,LIST_PRICE,ATTRIBUTE
+EST-1,FI-SW-01,16.50,Large
+EST-2,FI-SW-01,16.50,Small
+EST-3,FI-SW-02,18.50,Toothless
+EST-4,FI-FW-01,18.50,Spotted
+EST-5,FI-FW-01,18.50,Spotless
+EST-6,K9-BD-01,18.50,Male Adult
+EST-7,K9-BD-01,18.50,Female Puppy
+EST-8,K9-PO-02,18.50,Male Puppy
+EST-9,K9-DL-01,18.50,Spotless Male Puppy
+EST-10,K9-DL-01,18.50,Spotted Adult Female
+EST-11,RP-SN-01,18.50,Venomless
+EST-12,RP-SN-01,18.50,Rattleless
+EST-13,RP-LI-02,18.50,Green Adult
+EST-14,FL-DSH-01,58.50,Tailless
+EST-15,FL-DSH-01,23.50,With tail
+EST-16,FL-DLH-02,93.50,Adult Female
+EST-17,FL-DLH-02,93.50,Adult Male
+EST-18,AV-CB-01,193.50,Adult Male
+EST-19,AV-SB-02,15.50,Adult Male
+EST-20,FI-FW-02,5.50,Adult Male
+EST-21,FI-FW-02,5.29,Adult Female
+EST-22,K9-RT-02,135.50,Adult Male
+EST-23,K9-RT-02,145.49,Adult Female
+EST-24,K9-RT-02,255.50,Adult Male
+EST-25,K9-RT-02,325.29,Adult Female
+EST-26,K9-CW-01,125.50,Adult Male
+EST-27,K9-CW-01,155.29,Adult Female
+EST-28,K9-RT-01,155.29,Adult Female

@@ -1,0 +1,17 @@
+PRODUCT_ID,PRODUCT_NAME,CATEGORY_ID
+FI-SW-01,Angelfish,FISH
+FI-SW-02,Tiger Shark,FISH
+FI-FW-01,Koi,FISH
+FI-FW-02,Goldfish,FISH
+K9-BD-01,Bulldog,DOGS
+K9-PO-02,Poodle,DOGS
+K9-DL-01,Dalmation,DOGS
+K9-RT-01,Golden Retriever,DOGS
+K9-RT-02,Labrador Retriever,DOGS
+K9-CW-01,Chihuahua,DOGS
+RP-SN-01,Rattlesnake,REPTILES
+RP-LI-02,Iguana,REPTILES
+FL-DSH-01,Manx,CATS
+FL-DLH-02,Persian,CATS
+AV-CB-01,Amazon Parrot,BIRDS
+AV-SB-02,Finch,BIRDS
