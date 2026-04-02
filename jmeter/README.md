@@ -16,7 +16,7 @@ This JMeter test plan (`JPetStore_TestPlan.jmx`) implements an end-to-end user j
    c. Add First Item to Cart → GET  /actions/Cart.action?addItemToCart=&workingItemId={iid}
    d. Proceed to Checkout    → GET  /actions/Order.action?newOrderForm=
    e. Submit Order (Continue)→ POST /actions/Order.action (newOrder=Continue)
-   f. Confirm Order          → POST /actions/Order.action (confirmOrder=Confirm)
+   f. Confirm Order          → GET  /actions/Order.action?newOrder=&confirmed=true
 5. Logout                    → GET  /actions/Account.action?signoff=
 ```
 
@@ -48,7 +48,8 @@ The Stripes framework uses hidden `_sourcePage` and `__fp` tokens in every form.
 |-------|---------------|---------|
 | `login_sourcePage` / `login_fp` | Sign In page (Step 2) | Login POST (Step 3) |
 | `order_sourcePage` / `order_fp` | Checkout form (Step 4d) | Order Continue POST (Step 4e) |
-| `confirm_sourcePage` / `confirm_fp` | Confirmation page (Step 4e response) | Confirm POST (Step 4f) |
+
+> **Note:** The Confirm Order step (4f) uses a GET link (`stripes:link`), not a form POST, so no `_sourcePage`/`__fp` tokens are needed.
 
 ### Data Extraction
 
@@ -116,6 +117,11 @@ jmeter -n -t jmeter/JPetStore_TestPlan.jmx \
 |----------|---------|-------------|
 | Host | 52.146.7.63 | `-JHOST=your-host` |
 | Port | 8080 | `-JPORT=your-port` |
+| Username | j2ee | `-JUSERNAME=your-user` |
+| Password | j2ee | `-JPASSWORD=your-pass` |
+| Think Time Min | 1000 | `-JTHINK_TIME_MIN=500` |
+| Think Time Max | 3000 | `-JTHINK_TIME_MAX=5000` |
+| Pacing | 5000 | `-JPACING_MS=10000` |
 | Results file | jmeter-results.csv | `-JresultsFile=/path/to/file.csv` |
 
 ### Scaling Up
