@@ -27,37 +27,37 @@
           </elementProp>
           <elementProp name="HOST" elementType="Argument">
             <stringProp name="Argument.name">HOST</stringProp>
-            <stringProp name="Argument.value">52.146.7.63</stringProp>
+            <stringProp name="Argument.value">${__P(HOST,52.146.7.63)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="PORT" elementType="Argument">
             <stringProp name="Argument.name">PORT</stringProp>
-            <stringProp name="Argument.value">8080</stringProp>
+            <stringProp name="Argument.value">${__P(PORT,8080)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="USERNAME" elementType="Argument">
             <stringProp name="Argument.name">USERNAME</stringProp>
-            <stringProp name="Argument.value">j2ee</stringProp>
+            <stringProp name="Argument.value">${__P(USERNAME,j2ee)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="PASSWORD" elementType="Argument">
             <stringProp name="Argument.name">PASSWORD</stringProp>
-            <stringProp name="Argument.value">j2ee</stringProp>
+            <stringProp name="Argument.value">${__P(PASSWORD,j2ee)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="THINK_TIME_MIN" elementType="Argument">
             <stringProp name="Argument.name">THINK_TIME_MIN</stringProp>
-            <stringProp name="Argument.value">1000</stringProp>
+            <stringProp name="Argument.value">${__P(THINK_TIME_MIN,1000)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="THINK_TIME_MAX" elementType="Argument">
             <stringProp name="Argument.name">THINK_TIME_MAX</stringProp>
-            <stringProp name="Argument.value">3000</stringProp>
+            <stringProp name="Argument.value">${__P(THINK_TIME_MAX,3000)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="PACING_MS" elementType="Argument">
             <stringProp name="Argument.name">PACING_MS</stringProp>
-            <stringProp name="Argument.value">5000</stringProp>
+            <stringProp name="Argument.value">${__P(PACING_MS,5000)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -862,28 +862,6 @@ SampleResult.setIgnore()
                 <boolProp name="Assertion.assume_success">false</boolProp>
               </ResponseAssertion>
               <hashTree/>
-              <!-- Correlation: _sourcePage for confirm form -->
-              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - _sourcePage (Confirm)" enabled="true">
-                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-                <stringProp name="RegexExtractor.refname">confirm_sourcePage</stringProp>
-                <stringProp name="RegexExtractor.regex">name="_sourcePage" value="([^"]+)"</stringProp>
-                <stringProp name="RegexExtractor.template">$1$</stringProp>
-                <stringProp name="RegexExtractor.match_number">1</stringProp>
-                <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
-                <stringProp name="TestPlan.comments">Correlates the _sourcePage token from the order confirmation page for the final confirm POST.</stringProp>
-              </RegexExtractor>
-              <hashTree/>
-              <!-- Correlation: __fp for confirm form -->
-              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - __fp (Confirm)" enabled="true">
-                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-                <stringProp name="RegexExtractor.refname">confirm_fp</stringProp>
-                <stringProp name="RegexExtractor.regex">name="__fp" value="([^"]+)"</stringProp>
-                <stringProp name="RegexExtractor.template">$1$</stringProp>
-                <stringProp name="RegexExtractor.match_number">1</stringProp>
-                <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
-                <stringProp name="TestPlan.comments">Correlates the __fp (fingerprint) token from the order confirmation page.</stringProp>
-              </RegexExtractor>
-              <hashTree/>
             </hashTree>
           </hashTree>
 
@@ -902,38 +880,15 @@ SampleResult.setIgnore()
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="09_POST_ConfirmOrder" enabled="true">
-              <stringProp name="HTTPSampler.method">POST</stringProp>
-              <stringProp name="HTTPSampler.path">/actions/Order.action</stringProp>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="09_GET_ConfirmOrder" enabled="true">
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <stringProp name="HTTPSampler.path">/actions/Order.action?newOrder=&amp;confirmed=true</stringProp>
               <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
               <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
               <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-              <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-              <stringProp name="TestPlan.comments">Final order confirmation. Submits the 'confirmOrder=Confirm' event with correlated tokens. On success, displays 'Thank you, your order has been submitted.'</stringProp>
+              <stringProp name="TestPlan.comments">Final order confirmation via GET link. The ConfirmOrder.jsp uses a stripes:link (not a form), so this is a GET with newOrder event and confirmed=true parameter. On success, displays 'Thank you, your order has been submitted.'</stringProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
-                <collectionProp name="Arguments.arguments">
-                  <elementProp name="confirmOrder" elementType="HTTPArgument">
-                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                    <stringProp name="Argument.name">confirmOrder</stringProp>
-                    <stringProp name="Argument.value">Confirm</stringProp>
-                    <stringProp name="Argument.metadata">=</stringProp>
-                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  </elementProp>
-                  <elementProp name="_sourcePage" elementType="HTTPArgument">
-                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                    <stringProp name="Argument.name">_sourcePage</stringProp>
-                    <stringProp name="Argument.value">${confirm_sourcePage}</stringProp>
-                    <stringProp name="Argument.metadata">=</stringProp>
-                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  </elementProp>
-                  <elementProp name="__fp" elementType="HTTPArgument">
-                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                    <stringProp name="Argument.name">__fp</stringProp>
-                    <stringProp name="Argument.value">${confirm_fp}</stringProp>
-                    <stringProp name="Argument.metadata">=</stringProp>
-                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  </elementProp>
-                </collectionProp>
+                <collectionProp name="Arguments.arguments"/>
               </elementProp>
             </HTTPSamplerProxy>
             <hashTree>
