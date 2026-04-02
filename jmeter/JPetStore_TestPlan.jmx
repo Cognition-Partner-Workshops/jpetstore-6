@@ -1,0 +1,1207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <!-- ================================================================== -->
+    <!-- TEST PLAN: JPetStore E2E Performance Test                          -->
+    <!-- ================================================================== -->
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="JPetStore - E2E User Journey Test Plan" enabled="true">
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.comments">JPetStore end-to-end user journey: Home → Login → Browse Categories → View Product → Add to Cart → Checkout → Confirm → Logout. Includes correlation, parameterization, assertions, think times, and error handling.</stringProp>
+    </TestPlan>
+    <hashTree>
+
+      <!-- ================================================================ -->
+      <!-- USER DEFINED VARIABLES (Global)                                  -->
+      <!-- ================================================================ -->
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="UDV - Global Configuration" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="PROTOCOL" elementType="Argument">
+            <stringProp name="Argument.name">PROTOCOL</stringProp>
+            <stringProp name="Argument.value">http</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="HOST" elementType="Argument">
+            <stringProp name="Argument.name">HOST</stringProp>
+            <stringProp name="Argument.value">52.146.7.63</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PORT" elementType="Argument">
+            <stringProp name="Argument.name">PORT</stringProp>
+            <stringProp name="Argument.value">8080</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="USERNAME" elementType="Argument">
+            <stringProp name="Argument.name">USERNAME</stringProp>
+            <stringProp name="Argument.value">j2ee</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PASSWORD" elementType="Argument">
+            <stringProp name="Argument.name">PASSWORD</stringProp>
+            <stringProp name="Argument.value">j2ee</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="THINK_TIME_MIN" elementType="Argument">
+            <stringProp name="Argument.name">THINK_TIME_MIN</stringProp>
+            <stringProp name="Argument.value">1000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="THINK_TIME_MAX" elementType="Argument">
+            <stringProp name="Argument.name">THINK_TIME_MAX</stringProp>
+            <stringProp name="Argument.value">3000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PACING_MS" elementType="Argument">
+            <stringProp name="Argument.name">PACING_MS</stringProp>
+            <stringProp name="Argument.value">5000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+
+      <!-- ================================================================ -->
+      <!-- HTTP REQUEST DEFAULTS                                            -->
+      <!-- ================================================================ -->
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <stringProp name="HTTPSampler.domain">${HOST}</stringProp>
+        <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+        <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+        <stringProp name="HTTPSampler.path"/>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout">10000</stringProp>
+        <stringProp name="HTTPSampler.response_timeout">30000</stringProp>
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+      </ConfigTestElement>
+      <hashTree/>
+
+      <!-- ================================================================ -->
+      <!-- HTTP COOKIE MANAGER (session handling)                           -->
+      <!-- ================================================================ -->
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+        <stringProp name="CookieManager.policy">standard</stringProp>
+        <stringProp name="CookieManager.implementation">org.apache.jmeter.protocol.http.control.HC4CookieHandler</stringProp>
+      </CookieManager>
+      <hashTree/>
+
+      <!-- ================================================================ -->
+      <!-- HTTP HEADER MANAGER                                              -->
+      <!-- ================================================================ -->
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="Accept" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</stringProp>
+          </elementProp>
+          <elementProp name="Accept-Language" elementType="Header">
+            <stringProp name="Header.name">Accept-Language</stringProp>
+            <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+          </elementProp>
+          <elementProp name="Accept-Encoding" elementType="Header">
+            <stringProp name="Header.name">Accept-Encoding</stringProp>
+            <stringProp name="Header.value">gzip, deflate</stringProp>
+          </elementProp>
+          <elementProp name="Connection" elementType="Header">
+            <stringProp name="Header.name">Connection</stringProp>
+            <stringProp name="Header.value">keep-alive</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+
+      <!-- ================================================================ -->
+      <!-- THREAD GROUP: User Journey                                       -->
+      <!-- ================================================================ -->
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="TG - JPetStore User Journey" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">5</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
+        <boolProp name="ThreadGroup.delayedStart">false</boolProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"/>
+        <stringProp name="ThreadGroup.delay"/>
+        <stringProp name="TestPlan.comments">Virtual Users: 5 (adjust as needed). Ramp-up: 10s. Each VU executes: Home → Login → iterate all 5 categories (browse → view product → add to cart → checkout → confirm) → Logout.</stringProp>
+      </ThreadGroup>
+      <hashTree>
+
+        <!-- ============================================================== -->
+        <!-- JSR223 SAMPLER: Initialize Variables                           -->
+        <!-- ============================================================== -->
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 - Initialize Iteration Variables" enabled="true">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"/>
+          <stringProp name="filename"/>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">
+// Initialize iteration counter and error tracking
+vars.put("iterationErrors", "0")
+vars.put("currentCategoryIndex", "0")
+log.info("=== VU ${__threadNum} starting JPetStore user journey ===")
+SampleResult.setIgnore()
+          </stringProp>
+          <stringProp name="TestPlan.comments">Initializes per-thread variables. SampleResult.setIgnore() prevents this from appearing in results.</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+
+        <!-- ============================================================== -->
+        <!-- TRANSACTION: 01 - Launch Home Page                             -->
+        <!-- ============================================================== -->
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_01_LaunchHomePage" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="01_GET_HomePage" enabled="true">
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <stringProp name="HTTPSampler.path">/actions/Catalog.action</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="TestPlan.comments">Launch the JPetStore home page. Extracts _sourcePage and __fp tokens for search form (though not used, demonstrates correlation pattern).</stringProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <!-- Response Assertion: Home page loaded -->
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert - HomePage Title" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="0">JPetStore Demo</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message">Home page did not load - expected 'JPetStore Demo' in title</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <intProp name="Assertion.test_type">2</intProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <!-- Response Assertion: Sign In link present (not logged in) -->
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert - SignIn Link Present" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="0">Sign In</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message">Sign In link not found on home page - user may already be logged in</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <intProp name="Assertion.test_type">2</intProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+
+        <!-- Think Time after Home Page -->
+        <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time - After Home Page" enabled="true">
+          <stringProp name="ConstantTimer.delay">${THINK_TIME_MIN}</stringProp>
+          <stringProp name="RandomTimer.range">${__intSum(${THINK_TIME_MAX},-${THINK_TIME_MIN},)}</stringProp>
+        </UniformRandomTimer>
+        <hashTree/>
+
+        <!-- ============================================================== -->
+        <!-- TRANSACTION: 02 - Sign In (GET login form)                     -->
+        <!-- ============================================================== -->
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_02_GetSignInPage" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="02_GET_SignInPage" enabled="true">
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <stringProp name="HTTPSampler.path">/actions/Account.action?signonForm=</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="TestPlan.comments">Navigate to the Sign In form. Extracts Stripes _sourcePage and __fp hidden tokens required for the login POST.</stringProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <!-- Correlation: Extract _sourcePage for login form -->
+            <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS Extractor - _sourcePage (Login)" enabled="true">
+              <stringProp name="HtmlExtractor.refname">login_sourcePage</stringProp>
+              <stringProp name="HtmlExtractor.expr">input[name=_sourcePage]</stringProp>
+              <stringProp name="HtmlExtractor.attribute">value</stringProp>
+              <stringProp name="HtmlExtractor.match_number">1</stringProp>
+              <stringProp name="HtmlExtractor.default">NOT_FOUND</stringProp>
+              <stringProp name="HtmlExtractor.extractor_impl"/>
+              <stringProp name="TestPlan.comments">Correlates the _sourcePage hidden field from the Stripes login form. This CSRF-like token changes per session and must be sent with the login POST.</stringProp>
+            </HtmlExtractor>
+            <hashTree/>
+            <!-- Correlation: Extract __fp for login form -->
+            <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS Extractor - __fp (Login)" enabled="true">
+              <stringProp name="HtmlExtractor.refname">login_fp</stringProp>
+              <stringProp name="HtmlExtractor.expr">input[name=__fp]</stringProp>
+              <stringProp name="HtmlExtractor.attribute">value</stringProp>
+              <stringProp name="HtmlExtractor.match_number">1</stringProp>
+              <stringProp name="HtmlExtractor.default">NOT_FOUND</stringProp>
+              <stringProp name="HtmlExtractor.extractor_impl"/>
+              <stringProp name="TestPlan.comments">Correlates the __fp (fingerprint) hidden field from the Stripes login form. Required for form submission integrity.</stringProp>
+            </HtmlExtractor>
+            <hashTree/>
+            <!-- Response Assertion -->
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert - Login Form Present" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="0">Please enter your username and password</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message">Login form not displayed correctly</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <intProp name="Assertion.test_type">2</intProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+
+        <!-- Think Time after Sign In page -->
+        <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time - After SignIn Page" enabled="true">
+          <stringProp name="ConstantTimer.delay">${THINK_TIME_MIN}</stringProp>
+          <stringProp name="RandomTimer.range">${__intSum(${THINK_TIME_MAX},-${THINK_TIME_MIN},)}</stringProp>
+        </UniformRandomTimer>
+        <hashTree/>
+
+        <!-- ============================================================== -->
+        <!-- TRANSACTION: 03 - Login POST                                   -->
+        <!-- ============================================================== -->
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_03_Login" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="03_POST_Login" enabled="true">
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <stringProp name="HTTPSampler.path">/actions/Account.action</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <stringProp name="TestPlan.comments">Submits login credentials. Uses correlated _sourcePage and __fp from the GET login page. On success, redirects to home page with Welcome message.</stringProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="username" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">username</stringProp>
+                  <stringProp name="Argument.value">${USERNAME}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="password" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">password</stringProp>
+                  <stringProp name="Argument.value">${PASSWORD}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="signon" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">signon</stringProp>
+                  <stringProp name="Argument.value">Login</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="_sourcePage" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">_sourcePage</stringProp>
+                  <stringProp name="Argument.value">${login_sourcePage}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__fp" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">__fp</stringProp>
+                  <stringProp name="Argument.value">${login_fp}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <!-- Response Assertion: Login successful -->
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert - Login Success (Welcome)" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="0">Sign Out</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message">Login failed - 'Sign Out' link not found in response. Check credentials and correlated tokens.</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <intProp name="Assertion.test_type">2</intProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <!-- Extract all category IDs from the sidebar links -->
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - All Category IDs" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">categoryId</stringProp>
+              <stringProp name="RegexExtractor.regex">viewCategory=&amp;categoryId=([A-Z]+)</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.match_number">-1</stringProp>
+              <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
+              <stringProp name="TestPlan.comments">Extracts ALL category IDs (FISH, DOGS, CATS, REPTILES, BIRDS) from the sidebar links. match_number=-1 extracts all matches into categoryId_1, categoryId_2, etc. with categoryId_matchNr containing the count.</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+
+        <!-- Think Time after Login -->
+        <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time - After Login" enabled="true">
+          <stringProp name="ConstantTimer.delay">${THINK_TIME_MIN}</stringProp>
+          <stringProp name="RandomTimer.range">${__intSum(${THINK_TIME_MAX},-${THINK_TIME_MIN},)}</stringProp>
+        </UniformRandomTimer>
+        <hashTree/>
+
+        <!-- ============================================================== -->
+        <!-- JSR223: Pick a random category for this iteration              -->
+        <!-- ============================================================== -->
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 - Select Random Category" enabled="true">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"/>
+          <stringProp name="filename"/>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">
+// Collect unique category IDs extracted from the home page
+def matchNrStr = vars.get("categoryId_matchNr")
+if (matchNrStr == null || matchNrStr == "0" || matchNrStr == "NOT_FOUND") {
+    log.error("No categories found on home page after login!")
+    vars.put("selectedCategory", "FISH") // fallback
+    vars.put("uniqueCategoryCount", "1")
+    SampleResult.setIgnore()
+    return
+}
+
+int matchNr = matchNrStr.toInteger()
+def uniqueCategories = new LinkedHashSet()
+for (int i = 1; i &lt;= matchNr; i++) {
+    def catId = vars.get("categoryId_" + i)
+    if (catId != null &amp;&amp; catId != "NOT_FOUND") {
+        uniqueCategories.add(catId)
+    }
+}
+
+def categoryList = uniqueCategories.toList()
+vars.put("uniqueCategoryCount", categoryList.size().toString())
+
+// Store all unique categories for the ForEach loop
+for (int i = 0; i &lt; categoryList.size(); i++) {
+    vars.put("uniqueCategory_" + (i + 1), categoryList[i])
+}
+vars.put("uniqueCategory_matchNr", categoryList.size().toString())
+
+// Also pick one random category for quick-access
+def randomIndex = new Random().nextInt(categoryList.size())
+vars.put("selectedCategory", categoryList[randomIndex])
+
+log.info("VU ${__threadNum}: Found ${categoryList.size()} unique categories: ${categoryList}. Random pick: ${categoryList[randomIndex]}")
+SampleResult.setIgnore()
+          </stringProp>
+          <stringProp name="TestPlan.comments">Deduplicates extracted category IDs and stores unique list. Selects one random category and prepares the list for the ForEach controller to iterate all categories.</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+
+        <!-- ============================================================== -->
+        <!-- FOREACH CONTROLLER: Iterate all categories                     -->
+        <!-- ============================================================== -->
+        <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach - Iterate All Categories" enabled="true">
+          <stringProp name="ForeachController.inputVal">uniqueCategory</stringProp>
+          <stringProp name="ForeachController.returnVal">currentCategory</stringProp>
+          <boolProp name="ForeachController.useSeparator">true</boolProp>
+          <stringProp name="ForeachController.startIndex">0</stringProp>
+          <stringProp name="ForeachController.endIndex"/>
+          <stringProp name="TestPlan.comments">Iterates through each unique category (FISH, DOGS, CATS, REPTILES, BIRDS). For each category: browse → view first product → add first item to cart → checkout → confirm.</stringProp>
+        </ForeachController>
+        <hashTree>
+
+          <!-- ============================================================ -->
+          <!-- TRANSACTION: 04 - View Category                              -->
+          <!-- ============================================================ -->
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_04_ViewCategory" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="04_GET_CategoryPage_${currentCategory}" enabled="true">
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <stringProp name="HTTPSampler.path">/actions/Catalog.action?viewCategory=&amp;categoryId=${currentCategory}</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <stringProp name="TestPlan.comments">Navigates to the selected category page. Extracts all product IDs listed in the category for the next step.</stringProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <!-- Response Assertion: Category page loaded -->
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert - Category Page Loaded" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="0">Product ID</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message">Category page did not load - 'Product ID' table header not found</stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <intProp name="Assertion.test_type">2</intProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <!-- Extract first product ID from category listing -->
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - First Product ID" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">productId</stringProp>
+                <stringProp name="RegexExtractor.regex">viewProduct=&amp;productId=([^"]+)"[^>]*>([^&lt;]+)</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+                <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
+                <stringProp name="TestPlan.comments">Extracts the first product ID from the category page table. match_number=1 gets the first product. Template $1$ captures the product ID (e.g., FI-SW-01).</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+
+          <!-- Think Time after Category page -->
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time - After Category" enabled="true">
+            <stringProp name="ConstantTimer.delay">${THINK_TIME_MIN}</stringProp>
+            <stringProp name="RandomTimer.range">${__intSum(${THINK_TIME_MAX},-${THINK_TIME_MIN},)}</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+
+          <!-- ============================================================ -->
+          <!-- TRANSACTION: 05 - View Product (Items listing)               -->
+          <!-- ============================================================ -->
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_05_ViewProduct" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="05_GET_ProductPage_${productId}" enabled="true">
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <stringProp name="HTTPSampler.path">/actions/Catalog.action?viewProduct=&amp;productId=${productId}</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <stringProp name="TestPlan.comments">Views the product detail page showing all items (SKUs) for the selected product. Extracts the first item ID for Add to Cart.</stringProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <!-- Response Assertion: Product page loaded -->
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert - Product Page (Item ID header)" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="0">Item ID</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message">Product page did not load - 'Item ID' table header not found</stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <intProp name="Assertion.test_type">2</intProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <!-- Extract first item ID (e.g., EST-1) for Add to Cart -->
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - First Item ID (Add to Cart)" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">itemId</stringProp>
+                <stringProp name="RegexExtractor.regex">addItemToCart=&amp;workingItemId=([^"]+)</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+                <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
+                <stringProp name="TestPlan.comments">Extracts the first item ID (e.g., EST-1) from the 'Add to Cart' link on the product page. This is the workingItemId parameter needed for the cart action.</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+
+          <!-- Think Time after Product page -->
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time - After Product" enabled="true">
+            <stringProp name="ConstantTimer.delay">${THINK_TIME_MIN}</stringProp>
+            <stringProp name="RandomTimer.range">${__intSum(${THINK_TIME_MAX},-${THINK_TIME_MIN},)}</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+
+          <!-- ============================================================ -->
+          <!-- TRANSACTION: 06 - Add Item to Cart                           -->
+          <!-- ============================================================ -->
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_06_AddToCart" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="06_GET_AddToCart_${itemId}" enabled="true">
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <stringProp name="HTTPSampler.path">/actions/Cart.action?addItemToCart=&amp;workingItemId=${itemId}</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <stringProp name="TestPlan.comments">Adds the selected item to the shopping cart. The response displays the cart page with 'Proceed to Checkout' link.</stringProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <!-- Response Assertion: Cart page loaded -->
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert - Shopping Cart Displayed" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="0">Shopping Cart</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message">Shopping Cart page did not load after adding item</stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <intProp name="Assertion.test_type">2</intProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <!-- Assert Proceed to Checkout link exists -->
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert - Proceed to Checkout Available" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="0">Proceed to Checkout</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message">Proceed to Checkout link not found - cart may be empty</stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <intProp name="Assertion.test_type">2</intProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+
+          <!-- Think Time after Add to Cart -->
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time - After Add to Cart" enabled="true">
+            <stringProp name="ConstantTimer.delay">${THINK_TIME_MIN}</stringProp>
+            <stringProp name="RandomTimer.range">${__intSum(${THINK_TIME_MAX},-${THINK_TIME_MIN},)}</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+
+          <!-- ============================================================ -->
+          <!-- TRANSACTION: 07 - Proceed to Checkout (GET order form)       -->
+          <!-- ============================================================ -->
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_07_ProceedToCheckout" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="07_GET_CheckoutForm" enabled="true">
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <stringProp name="HTTPSampler.path">/actions/Order.action?newOrderForm=</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <stringProp name="TestPlan.comments">Navigates to the checkout form (Payment Details + Billing Address). Extracts _sourcePage and __fp tokens needed for the order submission POST, plus pre-populated billing fields.</stringProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <!-- Response Assertion: Checkout form displayed -->
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert - Payment Details Form" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="0">Payment Details</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message">Checkout form not displayed - Payment Details section missing</stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <intProp name="Assertion.test_type">2</intProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <!-- Correlation: _sourcePage for order form -->
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - _sourcePage (Order)" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">order_sourcePage</stringProp>
+                <stringProp name="RegexExtractor.regex">name="_sourcePage" value="([^"]+)"</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+                <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
+                <stringProp name="TestPlan.comments">Correlates the _sourcePage token from the checkout/order form. This token is unique per form render and must be submitted with the POST.</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <!-- Correlation: __fp for order form -->
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - __fp (Order)" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">order_fp</stringProp>
+                <stringProp name="RegexExtractor.regex">name="__fp" value="([^"]+)"</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+                <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
+                <stringProp name="TestPlan.comments">Correlates the __fp (fingerprint) token from the checkout/order form.</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <!-- Extract pre-populated billing fields -->
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - Credit Card" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">creditCard</stringProp>
+                <stringProp name="RegexExtractor.regex">name="order.creditCard"[^>]*value="([^"]*)"</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+                <stringProp name="RegexExtractor.default">999 9999 9999 9999</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - Expiry Date" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">expiryDate</stringProp>
+                <stringProp name="RegexExtractor.regex">name="order.expiryDate"[^>]*value="([^"]*)"</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+                <stringProp name="RegexExtractor.default">12/03</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - Bill First Name" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">billFirstName</stringProp>
+                <stringProp name="RegexExtractor.regex">name="order.billToFirstName"[^>]*value="([^"]*)"</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+                <stringProp name="RegexExtractor.default">ABC</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - Bill Last Name" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">billLastName</stringProp>
+                <stringProp name="RegexExtractor.regex">name="order.billToLastName"[^>]*value="([^"]*)"</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+                <stringProp name="RegexExtractor.default">XYX</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - Bill Address1" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">billAddress1</stringProp>
+                <stringProp name="RegexExtractor.regex">name="order.billAddress1"[^>]*value="([^"]*)"</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+                <stringProp name="RegexExtractor.default">901 San Antonio Road</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - Bill Address2" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">billAddress2</stringProp>
+                <stringProp name="RegexExtractor.regex">name="order.billAddress2"[^>]*value="([^"]*)"</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+                <stringProp name="RegexExtractor.default">MS UCUP02-206</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - Bill City" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">billCity</stringProp>
+                <stringProp name="RegexExtractor.regex">name="order.billCity"[^>]*value="([^"]*)"</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+                <stringProp name="RegexExtractor.default">Palo Alto</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - Bill State" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">billState</stringProp>
+                <stringProp name="RegexExtractor.regex">name="order.billState"[^>]*value="([^"]*)"</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+                <stringProp name="RegexExtractor.default">CA</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - Bill Zip" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">billZip</stringProp>
+                <stringProp name="RegexExtractor.regex">name="order.billZip"[^>]*value="([^"]*)"</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+                <stringProp name="RegexExtractor.default">94303</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - Bill Country" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">billCountry</stringProp>
+                <stringProp name="RegexExtractor.regex">name="order.billCountry"[^>]*value="([^"]*)"</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+                <stringProp name="RegexExtractor.default">USA</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+
+          <!-- Think Time after Checkout form -->
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time - After Checkout Form" enabled="true">
+            <stringProp name="ConstantTimer.delay">${THINK_TIME_MIN}</stringProp>
+            <stringProp name="RandomTimer.range">${__intSum(${THINK_TIME_MAX},-${THINK_TIME_MIN},)}</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+
+          <!-- ============================================================ -->
+          <!-- TRANSACTION: 08 - Submit Order (Continue)                    -->
+          <!-- ============================================================ -->
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_08_SubmitOrder_Continue" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="08_POST_OrderContinue" enabled="true">
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <stringProp name="HTTPSampler.path">/actions/Order.action</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+              <stringProp name="TestPlan.comments">Submits the checkout form with payment and billing details. Uses correlated _sourcePage and __fp from the checkout GET. The 'newOrder=Continue' parameter identifies the Stripes event handler. On success, shows the order confirmation page with a 'Confirm' button.</stringProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="order.cardType" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">order.cardType</stringProp>
+                    <stringProp name="Argument.value">Visa</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="order.creditCard" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">order.creditCard</stringProp>
+                    <stringProp name="Argument.value">${creditCard}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="order.expiryDate" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">order.expiryDate</stringProp>
+                    <stringProp name="Argument.value">${expiryDate}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="order.billToFirstName" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">order.billToFirstName</stringProp>
+                    <stringProp name="Argument.value">${billFirstName}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="order.billToLastName" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">order.billToLastName</stringProp>
+                    <stringProp name="Argument.value">${billLastName}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="order.billAddress1" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">order.billAddress1</stringProp>
+                    <stringProp name="Argument.value">${billAddress1}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="order.billAddress2" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">order.billAddress2</stringProp>
+                    <stringProp name="Argument.value">${billAddress2}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="order.billCity" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">order.billCity</stringProp>
+                    <stringProp name="Argument.value">${billCity}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="order.billState" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">order.billState</stringProp>
+                    <stringProp name="Argument.value">${billState}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="order.billZip" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">order.billZip</stringProp>
+                    <stringProp name="Argument.value">${billZip}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="order.billCountry" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">order.billCountry</stringProp>
+                    <stringProp name="Argument.value">${billCountry}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="newOrder" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">newOrder</stringProp>
+                    <stringProp name="Argument.value">Continue</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="_sourcePage" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">_sourcePage</stringProp>
+                    <stringProp name="Argument.value">${order_sourcePage}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="__fp" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">__fp</stringProp>
+                    <stringProp name="Argument.value">${order_fp}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <!-- Response Assertion: Confirmation page displayed -->
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert - Order Confirmation Page" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="0">Confirm</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message">Order confirmation page not displayed - 'Confirm' button not found. Check correlated _sourcePage and __fp tokens.</stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <intProp name="Assertion.test_type">2</intProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <!-- Correlation: _sourcePage for confirm form -->
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - _sourcePage (Confirm)" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">confirm_sourcePage</stringProp>
+                <stringProp name="RegexExtractor.regex">name="_sourcePage" value="([^"]+)"</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+                <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
+                <stringProp name="TestPlan.comments">Correlates the _sourcePage token from the order confirmation page for the final confirm POST.</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <!-- Correlation: __fp for confirm form -->
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - __fp (Confirm)" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">confirm_fp</stringProp>
+                <stringProp name="RegexExtractor.regex">name="__fp" value="([^"]+)"</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+                <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
+                <stringProp name="TestPlan.comments">Correlates the __fp (fingerprint) token from the order confirmation page.</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+
+          <!-- Think Time after Continue -->
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time - After Order Continue" enabled="true">
+            <stringProp name="ConstantTimer.delay">${THINK_TIME_MIN}</stringProp>
+            <stringProp name="RandomTimer.range">${__intSum(${THINK_TIME_MAX},-${THINK_TIME_MIN},)}</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+
+          <!-- ============================================================ -->
+          <!-- TRANSACTION: 09 - Confirm Order                              -->
+          <!-- ============================================================ -->
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_09_ConfirmOrder" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="09_POST_ConfirmOrder" enabled="true">
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <stringProp name="HTTPSampler.path">/actions/Order.action</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+              <stringProp name="TestPlan.comments">Final order confirmation. Submits the 'confirmOrder=Confirm' event with correlated tokens. On success, displays 'Thank you, your order has been submitted.'</stringProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="confirmOrder" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">confirmOrder</stringProp>
+                    <stringProp name="Argument.value">Confirm</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="_sourcePage" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">_sourcePage</stringProp>
+                    <stringProp name="Argument.value">${confirm_sourcePage}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="__fp" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">__fp</stringProp>
+                    <stringProp name="Argument.value">${confirm_fp}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <!-- Response Assertion: Order submitted successfully -->
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert - Order Submitted" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="0">Thank you</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message">Order confirmation failed - 'Thank you' message not found in response</stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <intProp name="Assertion.test_type">2</intProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <!-- Extract Order ID for logging -->
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex Extractor - Order Number" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">orderNumber</stringProp>
+                <stringProp name="RegexExtractor.regex">Order #(\d+)</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+                <stringProp name="RegexExtractor.default">UNKNOWN</stringProp>
+                <stringProp name="TestPlan.comments">Extracts the order number from the confirmation page for logging and validation.</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <!-- JSR223 PostProcessor: Log order details -->
+              <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 - Log Order Completion" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"/>
+                <stringProp name="filename"/>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">
+def orderNum = vars.get("orderNumber")
+def category = vars.get("currentCategory")
+def itemId = vars.get("itemId")
+log.info("VU ${__threadNum}: Order #${orderNum} placed successfully for category=${category}, item=${itemId}")
+                </stringProp>
+              </JSR223PostProcessor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+
+          <!-- Think Time after Confirm (before next category iteration) -->
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time - After Order Confirm" enabled="true">
+            <stringProp name="ConstantTimer.delay">${THINK_TIME_MIN}</stringProp>
+            <stringProp name="RandomTimer.range">${__intSum(${THINK_TIME_MAX},-${THINK_TIME_MIN},)}</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+
+        </hashTree>
+        <!-- END ForEach Controller -->
+
+        <!-- ============================================================== -->
+        <!-- TRANSACTION: 10 - Logout                                       -->
+        <!-- ============================================================== -->
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_10_Logout" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="10_GET_Logout" enabled="true">
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <stringProp name="HTTPSampler.path">/actions/Account.action?signoff=</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="TestPlan.comments">Signs out the user and invalidates the server-side session. Verifies 'Sign In' link reappears, confirming successful logout.</stringProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <!-- Response Assertion: Logout successful -->
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert - Logout Success (Sign In visible)" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="0">Sign In</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message">Logout may have failed - 'Sign In' link not found after signoff</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <intProp name="Assertion.test_type">2</intProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+
+        <!-- ============================================================== -->
+        <!-- JSR223 SAMPLER: Log Summary                                    -->
+        <!-- ============================================================== -->
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 - Log Journey Summary" enabled="true">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"/>
+          <stringProp name="filename"/>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">
+def categoryCount = vars.get("uniqueCategoryCount") ?: "0"
+log.info("=== VU ${__threadNum} completed JPetStore user journey: ${categoryCount} categories processed ===")
+SampleResult.setIgnore()
+          </stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+
+      </hashTree>
+      <!-- END Thread Group -->
+
+      <!-- ================================================================ -->
+      <!-- LISTENERS                                                        -->
+      <!-- ================================================================ -->
+
+      <!-- View Results Tree (disable for load tests) -->
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>true</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"/>
+        <stringProp name="TestPlan.comments">Enable during debugging/script development. DISABLE for actual load tests to reduce memory consumption.</stringProp>
+      </ResultCollector>
+      <hashTree/>
+
+      <!-- Summary Report -->
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"/>
+      </ResultCollector>
+      <hashTree/>
+
+      <!-- Aggregate Report -->
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"/>
+      </ResultCollector>
+      <hashTree/>
+
+      <!-- Response Times Over Time (for trend analysis) -->
+      <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="Response Times Table" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">${__P(resultsFile,jmeter-results.csv)}</stringProp>
+        <stringProp name="TestPlan.comments">Writes results to CSV file. Override filename via: -JresultsFile=/path/to/results.csv</stringProp>
+      </ResultCollector>
+      <hashTree/>
+
+    </hashTree>
+    <!-- END Test Plan hashTree -->
+  </hashTree>
+</jmeterTestPlan>
